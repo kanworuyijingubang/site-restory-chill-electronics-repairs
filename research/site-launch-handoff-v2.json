@@ -44,12 +44,15 @@
     "dns_provider": "cloudflare",
     "deployment_provider": "vercel",
     "github_owner": "kanworuyijingubang",
-    "vercel_team": "",
-    "cloudflare_account": "",
+    "vercel_team": "dajiba1",
+    "cloudflare_account": "dc6c68011973180e285ea9495e878031",
     "fresh_domain": true,
     "uses_domain_email": false,
     "connected_spaceship_products": [],
-    "preserve_dns_records": [],
+    "preserve_dns_records": [
+      "A restory-chillelectronicsrepairs.wiki 76.76.21.21 proxied=true",
+      "A www.restory-chillelectronicsrepairs.wiki 76.76.21.21 proxied=true"
+    ],
     "authorize_dns_reset": false,
     "authorize_nameserver_change": true
   },
