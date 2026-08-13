@@ -1,0 +1,96 @@
+{
+  "schema_version": "restory-page-contracts-v1",
+  "site": "restory-chillelectronicsrepairs.wiki",
+  "language": "en",
+  "observed_at": "2026-08-13T17:00:00+08:00",
+  "content_boundary": "Full release; official Steam facts plus explicitly labeled current community evidence",
+  "indexable_pages": [
+    {
+      "route": "/",
+      "primary_keyword": "restory chill electronics repairs",
+      "intent": "entity and navigation",
+      "page_type": "home hub",
+      "evidence": ["steam-store", "autosuggest", "similarweb-phrase"]
+    },
+    {
+      "route": "/guides/",
+      "primary_keyword": "restory chill electronics repairs guide",
+      "intent": "guide routing",
+      "page_type": "guide hub",
+      "evidence": ["autosuggest", "similarweb-phrase", "steam-guides"]
+    },
+    {
+      "route": "/guides/beginners/",
+      "primary_keyword": "restory chill electronics repairs beginners guide",
+      "intent": "learn core loop",
+      "page_type": "how-to",
+      "evidence": ["steam-store", "youtube-transcript", "community-questions"]
+    },
+    {
+      "route": "/guides/cleaning-and-reassembly/",
+      "primary_keyword": "restory chill electronics repairs how to clean",
+      "intent": "complete cleaning and reassembly",
+      "page_type": "task guide",
+      "evidence": ["autosuggest", "steam-achievements", "youtube-transcript"]
+    },
+    {
+      "route": "/guides/how-to-sell-devices/",
+      "primary_keyword": "restory chill electronics repairs how to sell",
+      "intent": "marketplace and selling",
+      "page_type": "task guide",
+      "evidence": ["autosuggest", "similarweb-phrase", "steam-achievements", "community-guide"]
+    },
+    {
+      "route": "/guides/firmware-and-customization/",
+      "primary_keyword": "restory chill electronics repairs firmware",
+      "intent": "unlock reprogramming painting and stickers",
+      "page_type": "task guide",
+      "evidence": ["similarweb-phrase", "steam-achievements", "community-guide", "youtube-transcript"]
+    },
+    {
+      "route": "/achievements/",
+      "primary_keyword": "restory chill electronics repairs achievements",
+      "intent": "achievement list and routing",
+      "page_type": "reference",
+      "evidence": ["steam-global-achievements", "autosuggest", "steam-guide"]
+    },
+    {
+      "route": "/guides/legend-of-akiba/",
+      "primary_keyword": "restory chill electronics repairs legend of akiba",
+      "intent": "competition checklist",
+      "page_type": "checklist guide",
+      "evidence": ["steam-global-achievements", "steam-guides"]
+    },
+    {
+      "route": "/story/endings/",
+      "primary_keyword": "restory chill electronics repairs endings",
+      "intent": "spoiler choice guide",
+      "page_type": "story guide",
+      "evidence": ["autosuggest", "google-serp", "steam-achievements", "steam-guide"]
+    },
+    {
+      "route": "/devices/",
+      "primary_keyword": "restory chill electronics repairs devices",
+      "intent": "device reference",
+      "page_type": "reference index",
+      "evidence": ["steam-store", "legend-of-akiba-guide", "competitor-sitemaps"]
+    },
+    {
+      "route": "/game-info/",
+      "primary_keyword": "restory chill electronics repairs release date platforms price",
+      "intent": "purchase and compatibility facts",
+      "page_type": "game facts",
+      "evidence": ["steam-store-api", "autosuggest", "google-trends"]
+    },
+    {
+      "route": "/faq/",
+      "primary_keyword": "restory chill electronics repairs faq",
+      "intent": "short answers and routing",
+      "page_type": "faq",
+      "evidence": ["community-question-log", "autosuggest", "similarweb-questions"]
+    }
+  ],
+  "support_pages": ["/about/", "/contact/", "/privacy/", "/terms/", "/cookies/", "/disclaimer/"],
+  "excluded_intents": ["crack", "torrent", "free download", "trainer", "cheat engine", "APK", "adult mods", "unverified codes"],
+  "expansion_gate": "No new device-detail, character, multilingual, mod or ending-route family without a new approved source and template batch"
+}

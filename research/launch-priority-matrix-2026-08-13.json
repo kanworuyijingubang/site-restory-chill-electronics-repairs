@@ -1,0 +1,28 @@
+{
+  "schema_version": "launch-priority-matrix-v1",
+  "score_scale": 100,
+  "score_inputs": ["observed demand", "intent clarity", "launch freshness", "competition gap", "evidence availability", "unique value", "maintenance cost"],
+  "opportunity_score": 86,
+  "opportunity_decision": "launch-focused-mvp",
+  "clusters": [
+    {"cluster_id":"cluster_5cae37ec192e439a84b674385db29dc0","key":"entity","score":93,"tier":"P0"},
+    {"cluster_id":"cluster_4b63d7660b5940abacd16f8a8a2496dc","key":"guide-hub","score":90,"tier":"P0"},
+    {"cluster_id":"cluster_f884c5803c044ed79b936554a2934a0c","key":"achievements","score":88,"tier":"P0"},
+    {"cluster_id":"cluster_6627187d82684aa9932b836c852220d4","key":"cleaning","score":86,"tier":"P0"},
+    {"cluster_id":"cluster_6944458e5bcd44f9a0928400859ef9a6","key":"endings","score":84,"tier":"P0"},
+    {"cluster_id":"cluster_1f4d4eb1ff4647ac9eb54e6887ffccbb","key":"selling","score":83,"tier":"P0"},
+    {"cluster_id":"cluster_01e5bc4c19a94d5ba71d6fc9fc47b40a","key":"akiba","score":82,"tier":"P0"},
+    {"cluster_id":"cluster_0d008964153a493a97389e40cae08e35","key":"firmware-customization","score":81,"tier":"P0"},
+    {"cluster_id":"cluster_bcd2f36d6b694b8998cac6c12824ed84","key":"beginner","score":80,"tier":"P0"},
+    {"cluster_id":"cluster_5d8245707e6b451995470f2b4d8a67b9","key":"game-info","score":78,"tier":"P1-launch"},
+    {"cluster_id":"cluster_1a4bcf7aef5244fd9e245a41d36e9477","key":"faq","score":76,"tier":"P1-launch"},
+    {"cluster_id":"cluster_413c4bb598ef410aaeca19fb736f3c45","key":"devices","score":72,"tier":"P1-launch-index-only"}
+  ],
+  "deferred_families": [
+    {"family":"device detail pages","reason":"assembly order needs reproducible per-device evidence","reconsider":"approved device dataset with screenshots/order validation"},
+    {"family":"character pages","reason":"thin biographies and spoiler risk","reconsider":"official character source or repeated search demand"},
+    {"family":"multilingual pages","reason":"translation QA and hreflang maintenance cost","reconsider":"GSC country/query evidence plus approved localization workflow"},
+    {"family":"mods","reason":"safety, versioning and licensing uncertainty","reconsider":"official Workshop/mod support announcement"},
+    {"family":"console/mobile pages","reason":"no official platform announcement","reconsider":"official Steam/developer/platform announcement"}
+  ]
+}

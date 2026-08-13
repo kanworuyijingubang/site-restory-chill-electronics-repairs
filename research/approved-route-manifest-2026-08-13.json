@@ -1,0 +1,29 @@
+{
+  "version": "restory-route-manifest-v1",
+  "approved_at": "2026-08-13T17:20:00+08:00",
+  "keyword_snapshot_id": "keywordsnapshot_6da429aa3c494576ba67175c9611da19",
+  "content_batch_approval_id": "approval_fbcb8aaab85641a5a38f9d2b575f96b5",
+  "routes": [
+    { "path": "/", "index": true, "page_contract_id": "pagecontract_c5a25b7e7c254a77acee8b0d8f03e3b9", "cluster_id": "cluster_5cae37ec192e439a84b674385db29dc0" },
+    { "path": "/guides/", "index": true, "page_contract_id": "pagecontract_ac27b050241142d784e0c4ce03c35437", "cluster_id": "cluster_4b63d7660b5940abacd16f8a8a2496dc" },
+    { "path": "/guides/beginners/", "index": true, "page_contract_id": "pagecontract_65a42554efb84e979d4e447de3737bee", "cluster_id": "cluster_bcd2f36d6b694b8998cac6c12824ed84" },
+    { "path": "/guides/cleaning-and-reassembly/", "index": true, "page_contract_id": "pagecontract_76e81fe96d0249429c0b05e6911a1137", "cluster_id": "cluster_6627187d82684aa9932b836c852220d4" },
+    { "path": "/guides/how-to-sell-devices/", "index": true, "page_contract_id": "pagecontract_49b376e5a6194cc09a9e1f05d27630a1", "cluster_id": "cluster_1f4d4eb1ff4647ac9eb54e6887ffccbb" },
+    { "path": "/guides/firmware-and-customization/", "index": true, "page_contract_id": "pagecontract_c98af3293f144d9d86e9d5a58fb3ab7a", "cluster_id": "cluster_0d008964153a493a97389e40cae08e35" },
+    { "path": "/achievements/", "index": true, "page_contract_id": "pagecontract_63f98c303bc94016bc5f989d0fd969b8", "cluster_id": "cluster_f884c5803c044ed79b936554a2934a0c" },
+    { "path": "/guides/legend-of-akiba/", "index": true, "page_contract_id": "pagecontract_7c5b5bed0b7f43b89fa2e2153e7095c9", "cluster_id": "cluster_01e5bc4c19a94d5ba71d6fc9fc47b40a" },
+    { "path": "/story/endings/", "index": true, "page_contract_id": "pagecontract_f070dc1510104a1b96311ee723e2e344", "cluster_id": "cluster_6944458e5bcd44f9a0928400859ef9a6" },
+    { "path": "/devices/", "index": true, "page_contract_id": "pagecontract_b42f3356cac2443d849b71b067175dba", "cluster_id": "cluster_413c4bb598ef410aaeca19fb736f3c45" },
+    { "path": "/game-info/", "index": true, "page_contract_id": "pagecontract_4f15c2cef6ee4af0a61b90c58d9de686", "cluster_id": "cluster_5d8245707e6b451995470f2b4d8a67b9" },
+    { "path": "/faq/", "index": true, "page_contract_id": "pagecontract_cdbf1541c0a946a6a97b5ff1b6abfd25", "cluster_id": "cluster_1a4bcf7aef5244fd9e245a41d36e9477" },
+    { "path": "/about/", "index": true, "route_role": "trust" },
+    { "path": "/contact/", "index": true, "route_role": "corrections" },
+    { "path": "/privacy/", "index": false, "route_role": "legal" },
+    { "path": "/terms/", "index": false, "route_role": "legal" },
+    { "path": "/cookies/", "index": false, "route_role": "legal" },
+    { "path": "/disclaimer/", "index": false, "route_role": "legal" }
+  ],
+  "route_count": 18,
+  "indexable_count": 14,
+  "noindex_count": 4
+}

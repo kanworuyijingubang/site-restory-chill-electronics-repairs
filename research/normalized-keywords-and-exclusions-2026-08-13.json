@@ -1,0 +1,47 @@
+{
+  "schema_version": "normalized-keywords-v1",
+  "raw_artifacts_untouched": true,
+  "source_trace": {
+    "google_autosuggest": "artifact_3e0f26ac45fc400c9bad067a18a743cb",
+    "similarweb_phrase": "artifact_bcecc3f5fcc9485790fbc90726196bcb",
+    "similarweb_related": "artifact_614f61f84e8d48ed8fd91f36e2f0b8b4",
+    "similarweb_questions": "artifact_bc2a749bbda14cd79dead4d47833952e",
+    "google_trends": "artifact_ee35e218640e4b9eb24fc5ee7ce13ee4",
+    "live_serp": "artifact_faf31fb42b214b5f9af946aac67a8678"
+  },
+  "alias_map": {
+    "restory chill electronic repairs": "restory chill electronics repairs",
+    "restory chill electronics repair": "restory chill electronics repairs",
+    "restory: chill electronics repair": "restory chill electronics repairs",
+    "restory: chill electronics repairs": "restory chill electronics repairs",
+    "restory chill electronic repair steam": "restory chill electronics repairs steam",
+    "restory chill electronics repairs achievement guide": "restory chill electronics repairs achievements",
+    "restory chill electronics repairs cant update firmware": "restory chill electronics repairs firmware",
+    "restory chill electronics repairs cleanliness rating": "restory chill electronics repairs how to clean",
+    "restory chill electronics repairs atary links challenge guide": "restory chill electronics repairs legend of akiba"
+  },
+  "clusters": [
+    {"key":"entity","primary":"restory chill electronics repairs","intent":"entity/navigation","decision":"publish","path":"/"},
+    {"key":"guide-hub","primary":"restory chill electronics repairs guide","intent":"guide routing","decision":"publish","path":"/guides/"},
+    {"key":"beginner","primary":"restory chill electronics repairs beginners guide","intent":"learn core loop","decision":"publish","path":"/guides/beginners/"},
+    {"key":"cleaning","primary":"restory chill electronics repairs how to clean","intent":"clean and reassemble","decision":"publish","path":"/guides/cleaning-and-reassembly/"},
+    {"key":"selling","primary":"restory chill electronics repairs how to sell","intent":"marketplace/selling","decision":"publish","path":"/guides/how-to-sell-devices/"},
+    {"key":"firmware-customization","primary":"restory chill electronics repairs firmware","intent":"reprogram/paint/customize","decision":"publish-safe-answer","path":"/guides/firmware-and-customization/"},
+    {"key":"achievements","primary":"restory chill electronics repairs achievements","intent":"achievement reference","decision":"publish","path":"/achievements/"},
+    {"key":"akiba","primary":"restory chill electronics repairs legend of akiba","intent":"competition checklist","decision":"publish","path":"/guides/legend-of-akiba/"},
+    {"key":"endings","primary":"restory chill electronics repairs endings","intent":"spoiler choice guide","decision":"publish-qualified","path":"/story/endings/"},
+    {"key":"devices","primary":"restory chill electronics repairs devices","intent":"device reference","decision":"publish-index-only","path":"/devices/"},
+    {"key":"game-info","primary":"restory chill electronics repairs release date platforms price","intent":"purchase/compatibility","decision":"publish-live-price-link","path":"/game-info/"},
+    {"key":"faq","primary":"restory chill electronics repairs faq","intent":"short answers","decision":"publish","path":"/faq/"}
+  ],
+  "exclusion_log": [
+    {"pattern":"crack|torrent|steam unlocked|free download|skidrow|elamigos|igruha|pivigames","decision":"exclude","reason":"piracy or unsafe download intent"},
+    {"pattern":"trainer|cheat engine","decision":"exclude","reason":"cheat intent outside the site contract"},
+    {"pattern":"APK|Android download|mobile download","decision":"safe-answer","reason":"Steam currently confirms Windows and macOS only"},
+    {"pattern":"Switch|PS5|Xbox","decision":"safe-answer","reason":"do not create platform pages without an official announcement"},
+    {"pattern":"codes","decision":"no-page","reason":"no official code system was found"},
+    {"pattern":"nude mod|adult mod","decision":"exclude","reason":"unsafe/irrelevant expansion"},
+    {"pattern":"repair near me|real electronics repair","decision":"exclude","reason":"ambiguous local-service intent unrelated to the game"},
+    {"pattern":"total ending count","decision":"watch","reason":"current sources conflict; publish only achievement-linked verified routes"}
+  ]
+}

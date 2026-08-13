@@ -1,0 +1,63 @@
+{
+  "schema_version": "site-launch-handoff-v2",
+  "site_identity": {
+    "game_name": "ReStory: Chill Electronics Repairs",
+    "official_aliases": [
+      "ReStory Chill Electronics Repairs",
+      "ReStory: Chill Electronic Repairs"
+    ],
+    "primary_keyword": "restory chill electronics repairs",
+    "domain": "restory-chillelectronicsrepairs.wiki",
+    "canonical_host": "restory-chillelectronicsrepairs.wiki",
+    "default_locale": "en",
+    "target_markets": ["worldwide", "US"]
+  },
+  "selection_evidence": {
+    "decision_record_id": "task-0-find-keywords-restory-selection",
+    "raw_keyword_artifacts": [
+      "C:\\Users\\刘子楠\\.codex\\sessions\\2026\\08\\13\\rollout-2026-08-13T10-24-52-019ff8ef-cafb-7f00-8863-8e870ee3751d.jsonl"
+    ],
+    "normalized_keyword_artifacts": [],
+    "user_supplied_metrics_artifacts": [],
+    "selection_assumptions": [
+      "Launch-time demand and SERP composition must be refreshed.",
+      "Gameplay claims from demo or playtest material must be revalidated against the released game.",
+      "Unsafe piracy and cheat intent will not receive pages."
+    ],
+    "selected_at": "2026-08-13"
+  },
+  "launch_research": {
+    "allow_live_keyword_refresh": true,
+    "approved_authenticated_sources": ["similarweb-browser-session"],
+    "required_public_sources": [
+      "google-autosuggest",
+      "live-serp",
+      "youtube-public",
+      "steam-community",
+      "official-game-sources"
+    ],
+    "excluded_sources": ["private-discord", "piracy-sites", "cheat-sites"],
+    "research_cutoff": "2026-08-13T23:59:59+08:00"
+  },
+  "infrastructure": {
+    "registrar": "spaceship",
+    "dns_provider": "cloudflare",
+    "deployment_provider": "vercel",
+    "github_owner": "kanworuyijingubang",
+    "vercel_team": "",
+    "cloudflare_account": "",
+    "fresh_domain": true,
+    "uses_domain_email": false,
+    "connected_spaceship_products": [],
+    "preserve_dns_records": [],
+    "authorize_dns_reset": false,
+    "authorize_nameserver_change": true
+  },
+  "approval_policy": {
+    "require_keyword_baseline_approval": true,
+    "require_page_scope_approval": true,
+    "require_content_batch_approval": true,
+    "require_production_publish_approval": true
+  },
+  "notes": "The user explicitly approved completing the latest-SOP launch for the purchased domain. The reviewed MVP is approved; later mass expansion remains separately gated."
+}

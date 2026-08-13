@@ -1,0 +1,79 @@
+{
+  "schema_version": "launch-seed-matrix-v1",
+  "game": "ReStory: Chill Electronics Repairs",
+  "official_aliases": [
+    "ReStory Chill Electronics Repairs",
+    "ReStory: Chill Electronic Repairs"
+  ],
+  "market": "US",
+  "locale": "en-US",
+  "queries": {
+    "entity": [
+      "restory chill electronics repairs",
+      "restory chill electronics repairs game",
+      "restory chill electronics repairs wiki"
+    ],
+    "access": [
+      "restory chill electronics repairs steam",
+      "restory chill electronics repairs release date",
+      "restory chill electronics repairs price",
+      "restory chill electronics repairs demo",
+      "restory chill electronics repairs download",
+      "restory chill electronics repairs game pass"
+    ],
+    "beginner": [
+      "restory chill electronics repairs guide",
+      "restory chill electronics repairs how to play",
+      "restory chill electronics repairs beginner",
+      "restory chill electronics repairs tips",
+      "restory chill electronics repairs walkthrough"
+    ],
+    "task": [
+      "restory chill electronics repairs how to",
+      "restory chill electronics repairs where to find",
+      "restory chill electronics repairs not working",
+      "restory chill electronics repairs firmware",
+      "restory chill electronics repairs how to sell",
+      "restory chill electronics repairs cleanliness rating",
+      "restory chill electronics repairs challenge guide"
+    ],
+    "freshness": [
+      "restory chill electronics repairs update",
+      "restory chill electronics repairs patch notes",
+      "restory chill electronics repairs new"
+    ],
+    "decision": [
+      "restory chill electronics repairs best",
+      "restory chill electronics repairs vs",
+      "games like restory chill electronics repairs"
+    ],
+    "data": [
+      "restory chill electronics repairs devices",
+      "restory chill electronics repairs tools",
+      "restory chill electronics repairs parts",
+      "restory chill electronics repairs customers",
+      "restory chill electronics repairs achievements"
+    ],
+    "platform_problem": [
+      "restory chill electronics repairs ps5",
+      "restory chill electronics repairs xbox",
+      "restory chill electronics repairs switch",
+      "restory chill electronics repairs mobile",
+      "restory chill electronics repairs requirements",
+      "restory chill electronics repairs crash",
+      "restory chill electronics repairs multiplayer"
+    ]
+  },
+  "suffix_expansion_seeds": [
+    "restory chill electronics repairs",
+    "restory chill electronics repairs how to",
+    "restory chill electronics repairs best",
+    "restory chill electronics repairs guide"
+  ],
+  "not_applicable": {
+    "codes": "The released Steam game has no verified redeem-code system.",
+    "tier_list": "No reproducible rankable character/build system has been established.",
+    "roblox": "The title is a PC Steam game, not a Roblox experience."
+  }
+}
+

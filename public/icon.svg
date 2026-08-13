@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ReStory Repair Desk icon">
+  <defs>
+    <linearGradient id="bg" x1="48" y1="32" x2="464" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172842"/>
+      <stop offset="1" stop-color="#08101f"/>
+    </linearGradient>
+    <linearGradient id="tool" x1="170" y1="126" x2="342" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd281"/>
+      <stop offset="1" stop-color="#f19a59"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path d="M72 170h70M370 170h70M72 342h70M370 342h70" stroke="#6be6c1" stroke-width="18" stroke-linecap="round" opacity=".8"/>
+  <rect x="132" y="132" width="248" height="248" rx="58" fill="#101d31" stroke="#6be6c1" stroke-width="12"/>
+  <path d="M188 186h136v58H188z" fill="#6be6c1" opacity=".18"/>
+  <circle cx="214" cy="215" r="13" fill="#6be6c1"/>
+  <circle cx="256" cy="215" r="13" fill="#ffd281"/>
+  <circle cx="298" cy="215" r="13" fill="#f27c78"/>
+  <path d="M294 270c22-22 53 9 31 31l-72 72-40 8 8-40 73-71Z" fill="url(#tool)"/>
+  <path d="m219 340 34 34" stroke="#fff2d5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M173 296h74M173 322h48" stroke="#6be6c1" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+</svg>

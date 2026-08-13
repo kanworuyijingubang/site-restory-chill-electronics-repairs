@@ -1,0 +1,14 @@
+{
+  "schema_version": "google-autosuggest-manifest-v1",
+  "request_count": 143,
+  "observation_count": 410,
+  "status_counts": {
+    "ok": 329,
+    "empty": 73,
+    "error": 8
+  },
+  "observed_at": "2026-08-13T16:28:51.405427+08:00",
+  "encoding": "base64(gzip(utf8-json))",
+  "encoded_bytes": 7476,
+  "decoded_sha256": "b3f23f12d9742edba802df0601a87d144c7760de30b6a7f71fc1ef307924ab47"
+}
