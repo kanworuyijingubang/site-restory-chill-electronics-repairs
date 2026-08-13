@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { useEffect, useState } from "react";
 
 const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -17,6 +16,30 @@ export function ConsentAnalytics() {
     return () => window.clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (!measurementId || choice !== "accepted") return;
+
+    const analyticsWindow = window as Window & {
+      dataLayer?: unknown[][];
+      gtag?: (...args: unknown[]) => void;
+    };
+    analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
+    analyticsWindow.gtag = (...args: unknown[]) => analyticsWindow.dataLayer?.push(args);
+    analyticsWindow.gtag("js", new Date());
+    analyticsWindow.gtag("config", measurementId, { anonymize_ip: true });
+
+    const existing = document.querySelector<HTMLScriptElement>(`script[data-restory-ga="${measurementId}"]`);
+    if (existing) return;
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.dataset.restoryGa = measurementId;
+    document.head.appendChild(script);
+
+    return () => script.remove();
+  }, [choice]);
+
   if (!measurementId) return null;
 
   const decide = (value: "accepted" | "rejected") => {
@@ -26,12 +49,6 @@ export function ConsentAnalytics() {
 
   return (
     <>
-      {choice === "accepted" && (
-        <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} strategy="afterInteractive" />
-          <Script id="ga-consent" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${measurementId}',{anonymize_ip:true});`}</Script>
-        </>
-      )}
       {choice === null && (
         <aside className="consent" aria-label="Analytics consent">
           <div><strong>Optional analytics</strong><p>Help us see which repair guides are useful. Analytics stays off until you accept.</p></div>
