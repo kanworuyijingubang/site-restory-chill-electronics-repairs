@@ -1,0 +1,39 @@
+{
+  "schema_version": "community-keyword-observations-v1",
+  "observed_at": "2026-08-13T20:20:00+08:00",
+  "market": "Worldwide",
+  "locale": "en",
+  "source": "Steam Community public discussions and current web SERP review",
+  "observations": [
+    {
+      "raw_text": "restory chill electronics repairs cleaning not working",
+      "source_url": "https://steamcommunity.com/app/3812600/discussions/1/684114096137749161/",
+      "evidence": "Repeated first-item cleaning reports"
+    },
+    {
+      "raw_text": "restory chill electronics repairs stuck on first day",
+      "source_url": "https://steamcommunity.com/app/3812600/discussions/1/750542279460079428/",
+      "evidence": "Repeated first-day progression reports"
+    },
+    {
+      "raw_text": "restory chill electronics repairs story not progressing",
+      "source_url": "https://steamcommunity.com/app/3812600/discussions/1/",
+      "evidence": "Current technical-issues index contains plot and progression reports"
+    },
+    {
+      "raw_text": "restory chill electronics repairs steam deck not working",
+      "source_url": "https://steamcommunity.com/app/3812600/discussions/1/",
+      "evidence": "Current technical-issues index contains Steam Deck reports"
+    },
+    {
+      "raw_text": "restory chill electronics repairs performance issues",
+      "source_url": "https://steamcommunity.com/app/3812600/allnews/",
+      "evidence": "Developer performance patch and current troubleshooting demand"
+    },
+    {
+      "raw_text": "restory chill electronics repairs unwanted devices",
+      "source_url": "https://steamcommunity.com/app/3812600/",
+      "evidence": "Repeated questions about stripped and unwanted devices"
+    }
+  ]
+}

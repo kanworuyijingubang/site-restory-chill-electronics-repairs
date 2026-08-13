@@ -1,0 +1,20 @@
+{
+  "schema_version": "inner-page-brief-v1",
+  "canonical_keyword": "restory chill electronics repairs guide",
+  "keyword_cluster_id": "cluster-update-guide",
+  "page_contract_id": "pagecontract-update-beginners",
+  "canonical_path": "/guides/beginners/",
+  "title": "ReStory Beginner's Guide: Your First Repair-Shop Loop",
+  "meta_description": "Learn ReStory's first repair-shop loop: inspect jobs, disassemble safely, clean parts, control spending, finish orders and grow without wasting money.",
+  "search_question": "How should a new ReStory player complete repairs and grow the shop?",
+  "direct_answer_contract": "Give the complete inspect, disassemble, clean or repair, reassemble, verify, deliver and reinvest loop before optional detail.",
+  "target_word_count": 1200,
+  "outline": ["First-day checklist", "Spend for the bottleneck", "Story progress", "Repair setup", "Cash management", "End-of-job check"],
+  "required_fact_ids": ["steam-store-gameplay", "steam-achievements", "community-first-week-workflow"],
+  "source_observation_ids": ["google-autosuggest-guide", "similarweb-guide", "youtube-Cf1k_EBKwws"],
+  "unique_value": {"format": "end-to-end workflow plus spending decisions and failure checks"},
+  "internal_links": ["/guides/cleaning-and-reassembly/", "/guides/how-to-sell-devices/", "/guides/troubleshooting/", "/game-info/"],
+  "prohibited_claims": ["fixed prices", "unverified progression triggers", "unsupported platform availability"],
+  "unknowns": ["patch-specific story bugs"],
+  "index_state": "live"
+}

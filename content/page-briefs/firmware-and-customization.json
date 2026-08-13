@@ -1,0 +1,20 @@
+{
+  "schema_version": "inner-page-brief-v1",
+  "canonical_keyword": "restory chill electronics repairs firmware",
+  "keyword_cluster_id": "cluster-update-firmware",
+  "page_contract_id": "pagecontract-update-firmware",
+  "canonical_path": "/guides/firmware-and-customization/",
+  "title": "ReStory Firmware, Reprogramming & Customization Guide",
+  "meta_description": "Unlock ReStory reprogramming, diagnose firmware jobs and use airbrush paint or stickers without confusing three separate customization systems.",
+  "search_question": "How do firmware, reprogramming, paint and stickers work in ReStory?",
+  "direct_answer_contract": "Separate Unlock-ToolKit reprogramming, Airbrush palettes and sticker sheets, then diagnose purchase, installation, order and device prerequisites.",
+  "target_word_count": 1200,
+  "outline": ["Three systems", "Reprogramming workflow", "Firmware failure", "Complete app check", "Paint and stickers", "Device-specific issues"],
+  "required_fact_ids": ["steam-customization-achievements", "official-demo-airbrush", "community-unlock-toolkit"],
+  "source_observation_ids": ["similarweb-firmware", "similarweb-guitar-firmware", "youtube-Cf1k_EBKwws"],
+  "unique_value": {"format": "unlock matrix plus failure isolation"},
+  "internal_links": ["/guides/beginners/", "/guides/troubleshooting/", "/achievements/", "/faq/"],
+  "prohibited_claims": ["universal Guitar Legend fix", "real-device firmware advice"],
+  "unknowns": ["current Guitar Legend firmware failure cause"],
+  "index_state": "live"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "inner-page-brief-v1",
+  "canonical_keyword": "restory chill electronics repairs how to sell",
+  "keyword_cluster_id": "cluster-update-selling",
+  "page_contract_id": "pagecontract-update-selling",
+  "canonical_path": "/guides/how-to-sell-devices/",
+  "title": "How to Sell Devices in ReStory Without Losing Money",
+  "meta_description": "Use ReStory's marketplace without draining your bill reserve: compare total repair cost, choose a flip or donor, finish the device and sell safely.",
+  "search_question": "How do I buy, repair and sell devices without losing money in ReStory?",
+  "direct_answer_contract": "Compare listing price, missing parts, repair time and bill reserve, then choose repair, donor, practice or hold before buying.",
+  "target_word_count": 1200,
+  "outline": ["Buy-decide-sell loop", "Achievement anchors", "Real cost", "Device roles", "Sale checklist", "Unwanted devices"],
+  "required_fact_ids": ["steam-business-achievements", "community-marketplace-workflow", "community-unwanted-devices"],
+  "source_observation_ids": ["similarweb-how-to-sell", "steam-community-update:6", "youtube-Cf1k_EBKwws"],
+  "unique_value": {"format": "repair-versus-donor decision table plus bill-reserve checklist"},
+  "internal_links": ["/guides/beginners/", "/achievements/", "/guides/troubleshooting/", "/game-info/"],
+  "prohibited_claims": ["fixed margins", "guaranteed resale value", "unverified discard action"],
+  "unknowns": ["current disposal behavior for stripped shells"],
+  "index_state": "live"
+}

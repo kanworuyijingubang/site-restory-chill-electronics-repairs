@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
   if (!page) return {};
   const canonical = absoluteUrl(page.path);
   return {
-    title: page.path === "/" ? { absolute: page.title } : page.title,
+    title: { absolute: page.title },
     description: page.description,
     alternates: { canonical },
     robots: page.index ? { index: true, follow: true } : { index: false, follow: true },

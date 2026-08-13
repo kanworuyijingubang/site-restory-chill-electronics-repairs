@@ -1,0 +1,20 @@
+{
+  "schema_version": "inner-page-brief-v1",
+  "canonical_keyword": "restory chill electronics repairs performance issues",
+  "keyword_cluster_id": "cluster-update-troubleshooting",
+  "page_contract_id": "pagecontract-update-troubleshooting",
+  "canonical_path": "/guides/troubleshooting/",
+  "title": "ReStory Troubleshooting: Cleaning, Saves & Controls",
+  "meta_description": "Fix common ReStory problems with cleaning, missing parts, stalled story progress, Steam Cloud, controller setup, Steam Deck and low performance.",
+  "search_question": "What should I check when a ReStory task, save, control or performance problem blocks progress?",
+  "direct_answer_contract": "Start with task state and workspace checks, restart safely, then isolate cleaning, missing parts, story, cloud, controller or performance without deleting data.",
+  "target_word_count": 1200,
+  "outline": ["Three-minute triage", "Cleaning not working", "Missing parts", "Story progress", "Steam Cloud", "Performance", "Controllers and Steam Deck", "Bug reports"],
+  "required_fact_ids": ["steam-cloud-support", "steam-controller-support", "official-performance-patch", "community-cleaning-reports", "community-first-day-reports"],
+  "source_observation_ids": ["steam-community-update:1", "steam-community-update:2", "steam-community-update:3", "steam-community-update:4", "steam-community-update:5"],
+  "unique_value": {"format": "safe decision tree that separates interaction, state, save, input and performance problems"},
+  "internal_links": ["/guides/cleaning-and-reassembly/", "/guides/beginners/", "/guides/firmware-and-customization/", "/game-info/"],
+  "prohibited_claims": ["Steam Deck verification status", "unverified save path", "guaranteed workaround", "file deletion advice"],
+  "unknowns": ["full-release device-specific bug status", "official demo-save transfer behavior"],
+  "index_state": "live"
+}

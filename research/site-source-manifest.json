@@ -1,0 +1,46 @@
+{
+  "schema_version": "site-source-manifest-v1",
+  "checked_at": "2026-08-13T20:30:00+08:00",
+  "sources": [
+    {
+      "id": "steam-store",
+      "type": "official",
+      "url": "https://store.steampowered.com/app/3812600/ReStory_Chill_Electronics_Repairs/",
+      "expected_identity": "ReStory: Chill Electronics Repairs Steam store",
+      "status": "200-identity-matched",
+      "final_url": "https://store.steampowered.com/app/3812600/ReStory_Chill_Electronics_Repairs/"
+    },
+    {
+      "id": "steam-achievements",
+      "type": "official",
+      "url": "https://steamcommunity.com/stats/3812600/achievements",
+      "expected_identity": "ReStory Global Achievements",
+      "status": "200-identity-matched",
+      "final_url": "https://steamcommunity.com/stats/3812600/achievements"
+    },
+    {
+      "id": "steam-news",
+      "type": "official",
+      "url": "https://steamcommunity.com/app/3812600/allnews/",
+      "expected_identity": "ReStory announcements and patch notes",
+      "status": "200-identity-matched",
+      "final_url": "https://steamcommunity.com/app/3812600/allnews/"
+    },
+    {
+      "id": "steam-technical-issues",
+      "type": "community",
+      "url": "https://steamcommunity.com/app/3812600/discussions/1/",
+      "expected_identity": "ReStory technical-issues forum",
+      "status": "200-identity-matched",
+      "final_url": "https://steamcommunity.com/app/3812600/discussions/1/"
+    },
+    {
+      "id": "official-discord",
+      "type": "official-community",
+      "url": "https://discord.gg/restory",
+      "expected_identity": "ReStory Discord invitation",
+      "status": "200-identity-matched",
+      "final_url": "https://discord.com/invite/restory"
+    }
+  ]
+}

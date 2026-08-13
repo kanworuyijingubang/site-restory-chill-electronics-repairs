@@ -1,0 +1,77 @@
+{
+  "home": {
+    "meta": {
+      "title": "ReStory: Chill Electronics Repairs Wiki & Guides",
+      "description": "Repair, clean, sell and customize devices in ReStory with practical guides for beginners, achievements, firmware, endings and common problems."
+    },
+    "hero": {
+      "eyebrow": "Your Repair-Shop Companion",
+      "title": "ReStory: Chill Electronics Repairs Wiki & Guides",
+      "description": "Pick the task blocking your shop and get a direct path back to repairing devices, serving customers and growing the business.",
+      "stats": [
+        "Released Aug 6, 2026",
+        "Windows & macOS",
+        "50 Steam achievements",
+        "29 competition devices"
+      ],
+      "primaryCta": "Browse ReStory Guides",
+      "secondaryCta": "Track Achievements",
+      "tertiaryCta": "Fix a Problem",
+      "videoLabel": "Official game media"
+    },
+    "start": {
+      "eyebrow": "Start Here",
+      "title": "Choose the task on your workbench",
+      "cards": [
+        {"number": "1", "title": "Beginner Guide", "description": "Learn the inspect, repair, deliver and reinvest loop."},
+        {"number": "2", "title": "Cleaning & Reassembly", "description": "Find missing dirt, parts and assembly layers."},
+        {"number": "3", "title": "Firmware & Customization", "description": "Set up reprogramming, paint and stickers."},
+        {"number": "4", "title": "Troubleshooting", "description": "Diagnose cleaning, progress, save and control problems."}
+      ]
+    },
+    "aboutGame": {
+      "title": "Run a nostalgic electronics repair shop",
+      "paragraphs": [
+        "ReStory is a single-player shop-management simulation set in mid-2000s Tokyo. You disassemble, clean, repair and customize nostalgic devices while managing orders, parts and money.",
+        "Customer conversations shape their stories and your shop. Long-term goals include Steam achievements, licenses, marketplace work and assembly competitions across 29 documented devices."
+      ],
+      "stats": [
+        {"label": "Release", "value": "Aug 6, 2026"},
+        {"label": "Platforms", "value": "Windows & macOS"},
+        {"label": "Achievements", "value": "50"},
+        {"label": "Competition devices", "value": "29"}
+      ]
+    },
+    "sidebarCodes": ["暂无", "暂无"],
+    "finalCta": {
+      "title": "Get the shop moving again",
+      "description": "Start with the beginner workflow or open troubleshooting for the task that will not complete.",
+      "primary": "Open Beginner Guide",
+      "secondary": "Open Troubleshooting"
+    }
+  },
+  "footer": {
+    "aboutTitle": "ReStory Repair Desk",
+    "about": "ReStory Repair Desk is an independent fan guide for repairing devices, growing the shop and completing the game. It is not affiliated with Mandragora, tinyBuild, Valve or Steam.",
+    "description": "Practical ReStory guides for players.",
+    "playGame": "Open ReStory on Steam",
+    "officialDiscord": "Official Discord",
+    "officialYoutube": "Official YouTube",
+    "communityTool": "Steam Community",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "officialLinks": {
+    "website": "",
+    "playGame": "https://store.steampowered.com/app/3812600/ReStory_Chill_Electronics_Repairs/",
+    "discord": "https://discord.gg/restory",
+    "reddit": "",
+    "youtube": "",
+    "media": "https://steamcommunity.com/app/3812600/allnews/"
+  },
+  "metadata": {
+    "title": "ReStory: Chill Electronics Repairs Wiki & Guides",
+    "description": "Repair, clean, sell and customize devices in ReStory with practical guides for beginners, achievements, firmware, endings and common problems.",
+    "keywords": "ReStory guide, ReStory wiki, ReStory achievements, ReStory firmware, ReStory troubleshooting"
+  }
+}

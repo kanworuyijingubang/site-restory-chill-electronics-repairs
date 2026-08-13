@@ -1,0 +1,17 @@
+{
+  "schema_version": "restory-page-contracts-update-v2",
+  "operator_version": "2.2.0",
+  "approved_by": "user",
+  "approved_at": "2026-08-13T20:35:00+08:00",
+  "keyword_snapshot": "restory-update-2026-08-13",
+  "routes": [
+    {"path": "/guides/beginners/", "intent": "beginner repair-shop workflow", "action": "expand", "index": true},
+    {"path": "/guides/cleaning-and-reassembly/", "intent": "cleaning and dependency-order repair", "action": "expand", "index": true},
+    {"path": "/guides/how-to-sell-devices/", "intent": "marketplace selling and donor decision", "action": "expand", "index": true},
+    {"path": "/guides/firmware-and-customization/", "intent": "reprogramming, paint and stickers", "action": "expand", "index": true},
+    {"path": "/guides/troubleshooting/", "intent": "cleaning, progression, save, control and performance diagnosis", "action": "publish-new-guide", "index": true},
+    {"path": "/about/", "intent": "site information", "action": "noindex", "index": false},
+    {"path": "/contact/", "intent": "corrections contact", "action": "noindex", "index": false}
+  ],
+  "deferred_page_intents": ["how long to beat", "demo save transfer", "AI assets", "codes", "platform-specific pages", "device-detail pages", "similar games"]
+}

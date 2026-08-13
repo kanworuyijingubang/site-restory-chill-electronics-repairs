@@ -1,0 +1,20 @@
+{
+  "schema_version": "inner-page-brief-v1",
+  "canonical_keyword": "restory chill electronics repairs reassembly",
+  "keyword_cluster_id": "cluster-update-cleaning",
+  "page_contract_id": "pagecontract-update-cleaning",
+  "canonical_path": "/guides/cleaning-and-reassembly/",
+  "title": "How to Clean & Reassemble Devices in ReStory",
+  "meta_description": "Find the last dirty or missing part in ReStory, choose the right cleaning method and rebuild devices in the correct dependency order without wasting parts.",
+  "search_question": "Why is a ReStory part still dirty, missing or impossible to place?",
+  "direct_answer_contract": "Tell the player to separate dirt, damage and absence, scan every workbench view and rebuild from the deepest dependency outward.",
+  "target_word_count": 1200,
+  "outline": ["Find the missed part", "Manual and ultrasonic cleaning", "Dependency order", "First cleaning problem", "Two-pass inspection"],
+  "required_fact_ids": ["steam-cleaning-achievements", "community-first-pokia-cleaning", "community-manual-cleaning-counter"],
+  "source_observation_ids": ["similarweb-reassembly", "similarweb-cleanliness", "steam-community-update:1"],
+  "unique_value": {"format": "state diagnosis plus dependency-map reconstruction"},
+  "internal_links": ["/guides/beginners/", "/guides/troubleshooting/", "/achievements/", "/guides/legend-of-akiba/"],
+  "prohibited_claims": ["universal assembly order", "guaranteed patch workaround"],
+  "unknowns": ["device-specific post-release cleaning bugs"],
+  "index_state": "live"
+}

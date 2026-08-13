@@ -64,7 +64,7 @@ function Section({ section }: { section: PageRecord["sections"][number] }) {
       {section.bullets && <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}
       {section.steps && <ol className="steps">{section.steps.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{step.title}</h3><p>{step.body}</p></div></li>)}</ol>}
       {section.table && <div className="table-wrap"><table><thead><tr>{section.table.headers.map((h) => <th key={h}>{h}</th>)}</tr></thead><tbody>{section.table.rows.map((row) => <tr key={row.join("|")}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div>}
-      {section.note && <aside className="note"><strong>Evidence note</strong>{section.note}</aside>}
+      {section.note && <aside className="note"><strong>Tip</strong>{section.note}</aside>}
     </section>
   );
 }
@@ -93,7 +93,7 @@ function FAQs({ items }: { items: NonNullable<PageRecord["faq"]> }) {
 
 function Sources({ page }: { page: PageRecord }) {
   if (!page.sources?.length) return null;
-  return <section className="sources"><h2>Sources & update boundary</h2><p>Checked {UPDATED}. Community mechanics are release-week observations and may change after patches.</p><ul>{page.sources.map((source) => <li key={source.url}><span className={`source-kind ${source.kind}`}>{source.kind}</span><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></section>;
+  return <section className="sources"><h2>Sources</h2><p>Last checked {UPDATED}. Game behavior can change after an update, so use the linked Steam pages for the newest information.</p><ul>{page.sources.map((source) => <li key={source.url}><span className={`source-kind ${source.kind}`}>{source.kind}</span><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></section>;
 }
 
 function Related({ links }: { links?: PageRecord["related"] }) {
@@ -103,24 +103,25 @@ function Related({ links }: { links?: PageRecord["related"] }) {
 
 export function ContentRenderer({ page }: { page: PageRecord }) {
   const home = page.path === "/";
+  const legal = ["/privacy/", "/terms/", "/cookies/", "/disclaimer/"].includes(page.path);
   return (
     <>
-      <div className={`hero ${home ? "home-hero" : ""}`}>
+      <div className={`hero ${home ? "home-hero" : ""} ${legal ? "legal-hero" : ""}`}>
         <div className="hero-inner">
           <div className="hero-copy">
             {!home && <Breadcrumbs path={page.path} title={page.title} />}
             <div className="eyebrow"><span />{page.eyebrow}</div>
             <h1>{page.title}</h1>
             <p className="answer">{page.answer}</p>
-            <div className="status-row"><span className="status-chip">Updated {UPDATED}</span><span className="status-chip evidence-chip">{page.evidence}</span>{page.spoiler && <span className="status-chip spoiler-chip">Spoilers</span>}</div>
+            <div className="status-row"><span className="status-chip">Updated {UPDATED}</span>{page.spoiler && <span className="status-chip spoiler-chip">Spoilers</span>}</div>
             {home && <div className="hero-actions"><Link className="button primary-button" href="/guides/">Open guide desk</Link><Link className="button ghost-button" href="/achievements/">Track achievements</Link></div>}
           </div>
-          <HeroMedia path={page.path} home={home} />
+          {!legal && <HeroMedia path={page.path} home={home} />}
         </div>
       </div>
-      <div className="page-grid">
+      <div className={`page-grid ${legal ? "legal-grid" : ""}`}>
         <article className="article-card">
-          {home && <div className="bench-label"><span>REPAIR QUEUE</span><i>12 verified routes</i></div>}
+          {home && <div className="bench-label"><span>Popular guides</span><i>Pick your next task</i></div>}
           {page.sections.map((section) => <Section key={section.title} section={section} />)}
           {home && <GameGallery />}
           {page.path === "/achievements/" && <Achievements />}
@@ -128,10 +129,10 @@ export function ContentRenderer({ page }: { page: PageRecord }) {
           {page.faq && <FAQs items={page.faq} />}
           <Sources page={page} />
         </article>
-        <aside className="side-rail">
-          <div className="rail-card"><span className="rail-label">SOURCE CODE</span><strong>Official first.</strong><p>Steam confirms facts. Current player evidence is labeled and dated.</p><Link href="/about/">How we verify ↗</Link></div>
-          <div className="rail-card warning-card"><span className="rail-label">BOUNDARY</span><strong>No invented answers.</strong><p>Unsupported ports, codes, ending counts and stale prices stay out.</p></div>
-        </aside>
+        {!legal && <aside className="side-rail">
+          <div className="rail-card"><span className="rail-label">Quick start</span><strong>New to the shop?</strong><p>Learn the repair loop, spending priorities and the first progression checks.</p><Link href="/guides/beginners/">Open the beginner guide ↗</Link></div>
+          <div className="rail-card warning-card"><span className="rail-label">Need a fix?</span><strong>Something is stuck?</strong><p>Work through cleaning, progress, save, controller and performance checks.</p><Link href="/guides/troubleshooting/">Open troubleshooting ↗</Link></div>
+        </aside>}
       </div>
       <Related links={page.related} />
     </>

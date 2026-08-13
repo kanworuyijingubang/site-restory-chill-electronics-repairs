@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "verify-icons": "node scripts/verify-icons.mjs",
+    "qa:content": "node scripts/build-keyword-assets.mjs && node scripts/validate-content-assets.mjs",
     "qa:static": "node scripts/qa-static-output.mjs",
     "prebuild": "npm run verify-icons",
     "build": "next build",

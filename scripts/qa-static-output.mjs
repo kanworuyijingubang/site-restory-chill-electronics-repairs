@@ -6,11 +6,11 @@ const output = join(root, ".next", "server", "app");
 const origin = "https://restory-chillelectronicsrepairs.wiki";
 const routes = [
   "/", "/guides/", "/guides/beginners/", "/guides/cleaning-and-reassembly/",
-  "/guides/how-to-sell-devices/", "/guides/firmware-and-customization/", "/achievements/",
-  "/guides/legend-of-akiba/", "/story/endings/", "/devices/", "/game-info/", "/faq/",
+  "/guides/how-to-sell-devices/", "/guides/firmware-and-customization/", "/guides/troubleshooting/",
+  "/achievements/", "/guides/legend-of-akiba/", "/story/endings/", "/devices/", "/game-info/", "/faq/",
   "/about/", "/contact/", "/privacy/", "/terms/", "/cookies/", "/disclaimer/"
 ];
-const noindex = new Set(["/privacy/", "/terms/", "/cookies/", "/disclaimer/"]);
+const noindex = new Set(["/about/", "/contact/", "/privacy/", "/terms/", "/cookies/", "/disclaimer/"]);
 const approved = new Set(routes);
 const errors = [];
 

@@ -1,0 +1,45 @@
+{
+  "schema_version": "theme-v1",
+  "default_theme": "light",
+  "source": {
+    "assets": [
+      "/images/restory/official-header.jpg",
+      "/images/restory/official-background.jpg",
+      "/images/restory/screenshot-01.jpg"
+    ],
+    "reason": "The official key art and shop UI use a warm cream base, coral-red signage, golden yellow highlights, blue details and dark violet text. A light theme matches the cozy daytime repair-shop presentation."
+  },
+  "light": {
+    "background": "#fff5df",
+    "surface": "#fffaf0",
+    "surface_muted": "#f4e8cf",
+    "text": "#28233a",
+    "text_muted": "#665f70",
+    "primary": "#e64c3e",
+    "secondary": "#0d7b82",
+    "highlight": "#f5b83b",
+    "nav_theme_hsl": "5 76% 57%",
+    "nav_theme_light_hsl": "43 90% 60%"
+  },
+  "dark": {
+    "background": "#211b31",
+    "surface": "#2d2541",
+    "surface_muted": "#3a3050",
+    "text": "#fff5df",
+    "text_muted": "#d8ccbd",
+    "primary": "#ff7568",
+    "secondary": "#71d4d7",
+    "highlight": "#f5b83b",
+    "nav_theme_hsl": "5 100% 70%",
+    "nav_theme_light_hsl": "182 55% 64%"
+  },
+  "contrast": {
+    "target": "WCAG AA",
+    "checked_pairs": [
+      "#28233a on #fff5df",
+      "#665f70 on #fffaf0",
+      "#ffffff on #e64c3e",
+      "#fff5df on #211b31"
+    ]
+  }
+}

@@ -113,6 +113,7 @@ button, input { font: inherit; }
   margin: auto;
   padding: 74px 0;
 }
+.legal-hero .hero-inner { grid-template-columns: minmax(0, 760px); min-height: 320px; padding: 58px 0; }
 
 .hero-copy { position: relative; z-index: 2; }
 .eyebrow, .section-kicker, .rail-label, .bench-label, .breadcrumbs, .source-kind {
@@ -166,6 +167,8 @@ button, input { font: inherit; }
   width: min(1080px, calc(100% - 40px));
   margin: 64px auto 110px;
 }
+.legal-grid { grid-template-columns: minmax(0, 760px); justify-content: center; }
+.legal-grid .article-card { padding: 8px 0; }
 
 .article-card { min-width: 0; }
 .bench-label { display: flex; justify-content: space-between; margin-bottom: 24px; padding-bottom: 13px; border-bottom: 1px solid var(--line); color: var(--mint); }
