@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { achievementGroups, deviceGroups, pageByPath, type PageRecord, UPDATED } from "@/lib/site-data";
 
 function Breadcrumbs({ path, title }: { path: string; title: string }) {
@@ -12,15 +13,45 @@ function Breadcrumbs({ path, title }: { path: string; title: string }) {
   );
 }
 
-function WorkbenchArt() {
+const mediaForPath = (path: string) => {
+  if (path === "/") return { src: "/images/restory/screenshot-01.jpg", alt: "ReStory electronics repair shop and customer dialogue" };
+  if (path.includes("cleaning") || path.includes("reassembly")) return { src: "/images/restory/screenshot-05.jpg", alt: "Disassembled device on the ReStory repair workbench" };
+  if (path.includes("firmware") || path.includes("customization")) return { src: "/images/restory/screenshot-07.jpg", alt: "Custom-painted music player in ReStory" };
+  if (path.includes("sell") || path.includes("market")) return { src: "/images/restory/screenshot-04.jpg", alt: "ReStory flea market for buying repairable electronics" };
+  if (path.includes("solder") || path.includes("quiz")) return { src: "/images/restory/screenshot-03.jpg", alt: "Circuit board soldering repair in ReStory" };
+  if (path.includes("device") || path.includes("akiba")) return { src: "/images/restory/screenshot-08.jpg", alt: "Handheld console disassembled on the ReStory workbench" };
+  if (path.includes("achievement") || path.includes("story") || path.includes("ending")) return { src: "/images/restory/screenshot-06.jpg", alt: "Evening customer scene inside the ReStory repair shop" };
+  return { src: "/images/restory/screenshot-02.jpg", alt: "Portable console being cleaned on the ReStory workbench" };
+};
+
+function HeroMedia({ path, home }: { path: string; home: boolean }) {
+  const media = mediaForPath(path);
   return (
-    <div className="workbench-art" aria-hidden="true">
-      <div className="art-grid" />
-      <div className="device-shell"><span className="screen"><i /><i /><i /></span><span className="dial" /><span className="port" /></div>
-      <div className="screwdriver"><span /><i /></div>
-      <div className="wire wire-a" /><div className="wire wire-b" />
-      <span className="screw s1">×</span><span className="screw s2">×</span><span className="screw s3">×</span>
-    </div>
+    <figure className={`hero-media ${home ? "home-media" : ""}`}>
+      <div className="hero-shot">
+        <Image src={media.src} alt={media.alt} fill priority={home} sizes="(max-width: 920px) 100vw, 48vw" />
+      </div>
+      {home && <Image className="hero-key-art" src="/images/restory/official-header.jpg" alt="ReStory official key art" width={460} height={215} />}
+      <figcaption><span>Official game media</span> Source: Steam</figcaption>
+    </figure>
+  );
+}
+
+function GameGallery() {
+  const items = [
+    ["/images/restory/screenshot-02.jpg", "Clean and reassemble nostalgic handheld electronics"],
+    ["/images/restory/screenshot-03.jpg", "Repair circuit boards with hands-on soldering"],
+    ["/images/restory/screenshot-07.jpg", "Customize restored devices with paint and stickers"]
+  ] as const;
+  return (
+    <section className="game-gallery" aria-labelledby="gameplay-gallery">
+      <div className="section-kicker">Inside the repair shop</div>
+      <h2 id="gameplay-gallery">Actual ReStory gameplay</h2>
+      <div className="gallery-grid">
+        {items.map(([src, alt]) => <figure key={src}><Image src={src} alt={alt} width={1920} height={1080} sizes="(max-width: 640px) 100vw, 33vw" /><figcaption>{alt}</figcaption></figure>)}
+      </div>
+      <p className="official-media-note">Official promotional screenshots sourced from the <a href="https://store.steampowered.com/app/3812600/ReStory_Chill_Electronics_Repairs/" target="_blank" rel="noopener noreferrer">ReStory Steam store</a>. ReStory and its artwork belong to their respective owners.</p>
+    </section>
   );
 }
 
@@ -84,13 +115,14 @@ export function ContentRenderer({ page }: { page: PageRecord }) {
             <div className="status-row"><span className="status-chip">Updated {UPDATED}</span><span className="status-chip evidence-chip">{page.evidence}</span>{page.spoiler && <span className="status-chip spoiler-chip">Spoilers</span>}</div>
             {home && <div className="hero-actions"><Link className="button primary-button" href="/guides/">Open guide desk</Link><Link className="button ghost-button" href="/achievements/">Track achievements</Link></div>}
           </div>
-          <WorkbenchArt />
+          <HeroMedia path={page.path} home={home} />
         </div>
       </div>
       <div className="page-grid">
         <article className="article-card">
           {home && <div className="bench-label"><span>REPAIR QUEUE</span><i>12 verified routes</i></div>}
           {page.sections.map((section) => <Section key={section.title} section={section} />)}
+          {home && <GameGallery />}
           {page.path === "/achievements/" && <Achievements />}
           {(page.path === "/devices/" || page.path === "/guides/legend-of-akiba/") && <Devices />}
           {page.faq && <FAQs items={page.faq} />}

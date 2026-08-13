@@ -13,8 +13,8 @@ const nav = [
 export function LogoMark() {
   return (
     <span className="logo-mark" aria-hidden="true">
-      <span className="logo-led" />
-      <span className="logo-tool">↗</span>
+      <span className="logo-r">R</span>
+      <span className="logo-screw">●</span>
     </span>
   );
 }
@@ -41,7 +41,7 @@ export function SiteFooter() {
       <div className="footer-grid">
         <div>
           <div className="brand footer-brand"><LogoMark /><span><strong>ReStory</strong><small>Repair Desk</small></span></div>
-          <p>Independent, evidence-labeled guides for the full release.</p>
+          <p>Independent, evidence-labeled guides for the full release. Official game media is credited to its respective owners.</p>
         </div>
         <div><strong>Explore</strong><Link href="/guides/">Guides</Link><Link href="/achievements/">Achievements</Link><Link href="/devices/">Devices</Link></div>
         <div><strong>Trust</strong><Link href="/about/">About</Link><Link href="/contact/">Corrections</Link><Link href="/disclaimer/">Disclaimer</Link></div>

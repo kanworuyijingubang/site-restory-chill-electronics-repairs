@@ -14,13 +14,18 @@ export const metadata: Metadata = {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/icon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
     apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    other: [{ rel: "mask-icon", url: "/icon.svg", color: "#6be6c1" }]
+    other: [{ rel: "mask-icon", url: "/icon.svg", color: "#e64c3e" }]
   },
-  openGraph: { type: "website", siteName: SITE_NAME, locale: "en_US" },
-  twitter: { card: "summary" }
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "en_US",
+    images: [{ url: "/images/restory/official-header.jpg", width: 460, height: 215, alt: "ReStory official key art" }]
+  },
+  twitter: { card: "summary_large_image", images: ["/images/restory/official-header.jpg"] }
 };
 
-export const viewport: Viewport = { themeColor: "#0b1425", colorScheme: "dark" };
+export const viewport: Viewport = { themeColor: "#e64c3e", colorScheme: "light" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body><SiteShell>{children}</SiteShell><ConsentAnalytics /></body></html>;
