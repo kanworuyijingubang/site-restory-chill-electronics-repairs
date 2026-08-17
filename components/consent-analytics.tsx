@@ -45,13 +45,14 @@ export function ConsentAnalytics() {
   const decide = (value: "accepted" | "rejected") => {
     window.localStorage.setItem("restory-consent", value);
     setChoice(value);
+    window.dispatchEvent(new Event("restory:consent-changed"));
   };
 
   return (
     <>
       {choice === null && (
         <aside className="consent" aria-label="Analytics consent">
-          <div><strong>Optional analytics</strong><p>Help us see which repair guides are useful. Analytics stays off until you accept.</p></div>
+          <div><strong>Optional analytics &amp; ads</strong><p>Help us see which repair guides are useful and keep the site running. Analytics and third-party advertising stay off until you accept. Personalized ads remain disabled.</p></div>
           <div className="consent-actions"><button onClick={() => decide("rejected")}>Reject</button><button className="primary" onClick={() => decide("accepted")}>Accept</button></div>
         </aside>
       )}

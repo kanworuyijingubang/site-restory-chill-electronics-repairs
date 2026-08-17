@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { AdSlot } from "@/components/ad-slot";
 import { SITE_NAME } from "@/lib/site-data";
 
 const nav = [
@@ -53,5 +54,5 @@ export function SiteFooter() {
 }
 
 export function SiteShell({ children }: { children: ReactNode }) {
-  return <><SiteHeader /><main>{children}</main><SiteFooter /></>;
+  return <><SiteHeader /><main>{children}</main><AdSlot /><SiteFooter /></>;
 }
