@@ -4,7 +4,7 @@
   "keyword_cluster_id": "cluster-update-troubleshooting",
   "page_contract_id": "pagecontract-update-troubleshooting",
   "canonical_path": "/guides/troubleshooting/",
-  "title": "ReStory Troubleshooting: Cleaning, Saves & Controls",
+  "title": "ReStory Not Working? Cleaning, Save & Progress Fixes",
   "meta_description": "Fix common ReStory problems with cleaning, missing parts, stalled story progress, Steam Cloud, controller setup, Steam Deck and low performance.",
   "search_question": "What should I check when a ReStory task, save, control or performance problem blocks progress?",
   "direct_answer_contract": "Start with task state and workspace checks, restart safely, then isolate cleaning, missing parts, story, cloud, controller or performance without deleting data.",

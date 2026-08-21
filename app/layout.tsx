@@ -6,8 +6,8 @@ import { SITE_NAME, SITE_URL } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "ReStory: Chill Electronics Repairs Wiki & Guides", template: `%s | ${SITE_NAME}` },
-  description: "Practical guides for repairing, cleaning, selling and progressing in ReStory: Chill Electronics Repairs.",
+  title: { default: "ReStory Wiki: Firmware, Selling & Repair Guides", template: `%s | ${SITE_NAME}` },
+  description: "Current ReStory firmware, selling, cleaning and repair guides with official patch notes and achievement help.",
   applicationName: SITE_NAME,
   manifest: "/manifest.json",
   icons: {

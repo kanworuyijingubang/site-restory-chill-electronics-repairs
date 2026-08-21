@@ -5,7 +5,7 @@ const root = process.cwd();
 const output = join(root, ".next", "server", "app");
 const origin = "https://restory-chillelectronicsrepairs.wiki";
 const routes = [
-  "/", "/guides/", "/guides/beginners/", "/guides/cleaning-and-reassembly/",
+  "/", "/updates/", "/guides/", "/guides/beginners/", "/guides/cleaning-and-reassembly/",
   "/guides/how-to-sell-devices/", "/guides/firmware-and-customization/", "/guides/troubleshooting/",
   "/achievements/", "/guides/legend-of-akiba/", "/story/endings/", "/devices/", "/game-info/", "/faq/",
   "/about/", "/contact/", "/privacy/", "/terms/", "/cookies/", "/disclaimer/"

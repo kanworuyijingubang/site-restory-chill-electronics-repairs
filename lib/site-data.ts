@@ -1,6 +1,6 @@
 export const SITE_URL = "https://restory-chillelectronicsrepairs.wiki";
 export const SITE_NAME = "ReStory Repair Desk";
-export const UPDATED = "Aug 13, 2026";
+export const UPDATED = "Aug 21, 2026";
 
 export type Source = {
   label: string;
@@ -91,6 +91,7 @@ const steamNews: Source = {
 };
 
 export const guideLinks: RelatedLink[] = [
+  { href: "/updates/", title: "Latest updates", description: "Read the current patch changes and dated roadmap notes." },
   { href: "/guides/beginners/", title: "Beginner's guide", description: "Learn the repair and shop-management loop." },
   { href: "/guides/cleaning-and-reassembly/", title: "Cleaning & reassembly", description: "Find dirt, track parts and rebuild devices." },
   { href: "/guides/how-to-sell-devices/", title: "How to sell devices", description: "Use the marketplace without erasing your margin." },
@@ -195,8 +196,8 @@ const commonRelated = [
 export const pages: PageRecord[] = [
   {
     path: "/",
-    title: "ReStory: Chill Electronics Repairs Wiki & Guides",
-    description: "Repair, clean, sell and customize devices in ReStory with practical guides for beginners, achievements, firmware, endings and common problems.",
+    title: "ReStory Wiki: Firmware, Selling & Repair Guides",
+    description: "Solve ReStory firmware, selling, cleaning and repair problems with current, sourced guides plus patch notes, achievement checklists and shop-progression fixes.",
     eyebrow: "Your repair-shop companion",
     answer: "Pick the task blocking your shop and get a direct path back to repairing devices, serving customers and growing the business.",
     evidence: "Official + community",
@@ -206,8 +207,24 @@ export const pages: PageRecord[] = [
       { title: "ReStory at a glance", table: { headers: ["What players ask", "Current answer"], rows: [["Release date", "Aug 6, 2026"], ["Where to play", "Windows and macOS on Steam"], ["Achievements", "50"], ["Developer / publisher", "Mandragora / tinyBuild"], ["Setting", "A mid-2000s Tokyo electronics repair shop"]] }, note: "For today's regional price, controller details and future platform announcements, open the official Steam page." },
       { title: "Four good places to begin", bullets: ["Open the beginner guide before buying tools or licenses at random.", "Use cleaning and reassembly help when a device will not complete.", "Use the marketplace guide before spending your bill reserve on a broken device.", "Open troubleshooting when restarting the same task is not solving the problem."] }
     ],
-    sources: [steamStore, steamAchievements, steamGuides],
+    sources: [steamStore, steamAchievements, steamGuides, steamNews],
     related: guideLinks
+  },
+  {
+    path: "/updates/",
+    title: "ReStory Update 1.0.011r: Patch Notes & Roadmap",
+    description: "ReStory 1.0.011r patch notes summarized: sonic-bath achievements, gadget inventory, paint UI and progression fixes, plus the dated September content plan.",
+    eyebrow: "Official update desk",
+    answer: "The latest official patch found on Aug 21 is 1.0.011r, released Aug 19. It makes sonic-bath cleaning count toward cleaning achievements, adds a button to place all gadget items into inventory and fixes paint, store, quest, achievement and performance issues. A free content update is announced for Sep 14; it is planned, not yet released.",
+    evidence: "Official facts",
+    index: true,
+    sections: [
+      { title: "What changed in 1.0.011r", bullets: ["Sonic-bath cleaning now counts toward the cleaning achievements.", "A new button places all gadget items into inventory at once.", "The paint interface and several uncleanable-part states were fixed.", "Fixes cover Brick Game quest items, minor-item store availability, Jack of all trades and Atari Lynx competition behavior.", "The patch also includes performance and audio fixes."] },
+      { title: "What this changes in the guides", table: { headers: ["Player task", "Current guidance"], rows: [["Cleaning achievements", "Automatic sonic-bath cleaning now counts as of 1.0.011r; manual cleaning remains useful for diagnosing a stuck part."], ["Gadget intake", "Use the new place-all button when moving gadget items into inventory."], ["Painting", "Recheck the palette UI on 1.0.011r before following an older workaround."], ["Legend of Akiba", "The Atari Lynx competition fix may resolve an older completion blocker."]] } },
+      { title: "September 14 content update", paragraphs: ["The Aug 20 official announcement schedules the first free content update for Sep 14 with more story, a new character and a new gadget. These are roadmap items, not features in the current build."], note: "Check the official announcement again on or after Sep 14 before changing this page to say the content shipped." }
+    ],
+    sources: [steamNews],
+    related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning guide", description: "Use the corrected sonic-bath guidance." }, { href: "/guides/firmware-and-customization/", title: "Firmware & paint", description: "Separate reprogramming from paint fixes." }, { href: "/guides/how-to-sell-devices/", title: "Selling guide", description: "Use the updated inventory workflow." }]
   },
   {
     path: "/guides/",
@@ -256,15 +273,15 @@ export const pages: PageRecord[] = [
       { title: "Plan the next day before you end this one", paragraphs: ["Before ending the day, look at the jobs you can already accept, the parts you currently own and the expense that is most likely to stop tomorrow's work. Finish a nearly complete order when possible, but do not start a large speculative repair simply to keep the bench busy. A clear next job makes it easier to tell whether the following day is waiting for a customer, an inbox action, a license or a story trigger.", "When new options appear, change one part of the shop at a time. Buy a license because you have the cash and want its device category; buy a tool because the current workflow is slow or a required action is unavailable. This makes every purchase testable. If progress changes after the purchase, you know what unlocked it; if it does not, you still have enough reserve to continue diagnosing the real blocker."], note: "There is no single mandatory upgrade order for every playthrough. Use your available jobs, costs and current bottleneck to choose the next purchase." }
     ],
     sources: [steamStore, videoGuide],
-    related: [guideLinks[1], guideLinks[2], { href: "/game-info/", title: "Game info", description: "Platforms and requirements." }]
+    related: [guideLinks[2], guideLinks[3], { href: "/game-info/", title: "Game info", description: "Platforms and requirements." }]
   },
   {
     path: "/guides/cleaning-and-reassembly/",
-    title: "How to Clean & Reassemble Devices in ReStory",
+    title: "ReStory: Clean Every Part & Reassemble Devices",
     description: "Find the last dirty or missing part in ReStory, choose the right cleaning method and rebuild devices in the correct dependency order without wasting parts.",
     eyebrow: "Repair checklist",
-    answer: "Inspect every side, use the notepad/status cues, clean loose parts manually when an achievement requires it, then rebuild in reverse disassembly order.",
-    evidence: "Community-tested",
+    answer: "Inspect every side, use the notepad/status cues, separate dirt from damage or absence, then rebuild in reverse disassembly order. Since patch 1.0.011r, sonic-bath cleaning counts toward the cleaning achievements.",
+    evidence: "Official + community",
     index: true,
     sections: [
       { title: "Find the part you missed", steps: [
@@ -273,7 +290,7 @@ export const pages: PageRecord[] = [
         { title: "Inspect loose components", body: "Select pieces individually and look for dirty, damaged or missing-state indicators." },
         { title: "Check what is still on the bench", body: "A loose screw, cover, battery or bracket often means the device is not fully assembled." }
       ] },
-      { title: "Manual cleaning vs ultrasonic bath", paragraphs: ["The automatic bath is useful for throughput. However, current player guides report that its cleaning may not advance the manual part-cleaning counters used by Big cleaning! and Galactic cleaning!. If you are farming those achievements, clean parts manually and keep the work in one save."], note: "If an achievement counter does not move after an update, return to manual cleaning and compare the latest Steam reports." },
+      { title: "Manual cleaning vs sonic bath", paragraphs: ["Patch 1.0.011r changed the old behavior: items cleaned in the sonic bath now count toward Big cleaning! and Galactic cleaning!. Use the bath for throughput on the current build; use manual cleaning when you need to isolate one part or diagnose a job that is not advancing."], note: "Older guides saying sonic-bath cleaning never counts are obsolete for 1.0.011r. If a counter still fails, record the current version and compare the latest official reports." },
       { title: "Reassembly rule", bullets: ["Start with the deepest component that was removed last.", "Seat cables, boards and shields before outer shells.", "Install batteries or removable covers after the internal stack is complete.", "If a part will not place, another lower layer or fastener is probably missing."] },
       { title: "Separate dirt, damage and absence", paragraphs: ["A device can fail a job for three different reasons: a part is dirty, a part is broken or a required part is not present. Cleaning a damaged component does not repair it, and buying a replacement does not help if the original part is simply sitting elsewhere on the bench. Read the task cue, select each loose component and decide which of the three states you are solving before taking another action.", "This distinction is also useful when a progress percentage appears stuck. If cleaning no longer changes the task, stop brushing the same surface and inspect the remaining components, the other workspace views and the parts inventory. The missing action may be replacement or reassembly rather than more cleaning. Repeating the wrong tool can make a simple state problem feel like a bug."] },
       { title: "Use the bench as a dependency map", paragraphs: ["During disassembly, the object you remove now usually exposes the object you will need to install earlier during reassembly. Mentally group the device into outer shell, fasteners, shields, boards and removable components. You do not need to memorize a universal order for all 29 devices; you need to preserve the order of the device currently in front of you.", "When you return to assembly, begin with anything that another part must cover. A board cannot be installed after its shield or shell is already in place, and an outer cover cannot close while a cable, battery or screw remains unseated. If the game refuses placement, treat that refusal as a dependency clue rather than trying the same part from many angles."] },
@@ -286,18 +303,19 @@ export const pages: PageRecord[] = [
       ], note: "The cleaning-container workflow comes from repeated community reports. Menus and interaction details can change after updates." },
       { title: "Finish with a two-pass inspection", paragraphs: ["First, inspect the assembled model and use the task feedback to find an incomplete category. Second, scan every bench area for anything still loose. A device can look finished while a tiny fastener or bracket remains outside it, and a clean device can still be incomplete because the wrong replacement part was used.", "Do not buy another component until both passes are complete. Extra parts reduce your bill reserve and can create more clutter without solving the job. If everything is installed and the requirement still does not advance, move to the troubleshooting guide and diagnose the sequence as a possible progress or save-state problem."] }
     ],
-    sources: [steamAchievements, achievementGuide, videoGuide],
+    sources: [steamAchievements, steamNews, achievementGuide, videoGuide],
     related: [{ href: "/guides/beginners/", title: "Beginner's guide", description: "Review the full job loop." }, { href: "/achievements/", title: "Cleaning achievements", description: "Track official thresholds." }, { href: "/guides/legend-of-akiba/", title: "Akiba checklist", description: "Prepare for no-hint assembly." }]
   },
   {
     path: "/guides/how-to-sell-devices/",
-    title: "How to Sell Devices in ReStory Without Losing Money",
+    title: "How to Sell Items in ReStory (Marketplace Guide)",
     description: "Use ReStory's marketplace without draining your bill reserve: compare total repair cost, choose a flip or donor, finish the device and sell safely.",
     eyebrow: "Marketplace workflow",
     answer: "Buy only after comparing the device's condition, seller signal, missing parts and likely resale path; otherwise use it as a parts donor instead of forcing a loss-making repair.",
     evidence: "Official + community",
     index: true,
     sections: [
+      { title: "1.0.011r inventory and store changes", paragraphs: ["The Aug 19 patch added a button that places all gadget items into inventory and fixed a problem with minor items being available in the store. The new button speeds intake, but it does not replace the profit check below or guarantee that every repaired item can be sold immediately."], note: "Treat older UI screenshots as version-specific when the place-all button is missing." },
       { title: "The buy → decide → sell loop", steps: [
         { title: "Unlock and open the marketplace", body: "The in-game browser becomes a major source of devices and parts as the shop progresses." },
         { title: "Read the listing", body: "Prefer a clear condition and a credible seller signal while learning the economy." },
@@ -319,18 +337,19 @@ export const pages: PageRecord[] = [
       { title: "What to do with stripped or unwanted devices", paragraphs: ["Current Steam discussions include repeated questions from players who removed useful parts and were left with a device body they did not want. Do not assume there is a universal discard action if your current interface does not show one. First check whether the remaining object can be completed, sold later or stored without blocking an active order.", "Before creating another stripped shell, decide exactly which components you need and whether buying them directly is available. A donor is useful when its parts solve more value than the donor consumes. If the game does not provide the disposal option you expect, check the latest discussion and patch notes rather than buying additional inventory to work around it."] }
       ,{ title: "Use a simple purchase limit", paragraphs: ["Choose a cash floor that stays untouched for bills and required customer parts, then treat only the amount above that floor as marketplace money. The exact number will change with your shop, but the rule prevents one attractive listing from turning a profitable day into a stalled repair queue. If a purchase would cross the floor, wait for a completed order or choose a cheaper project.", "For uncertain listings, set a second limit for replacement parts before disassembly begins. Stop and reclassify the device as a donor or hold when the actual damage exceeds that limit. Sunk cost is not a reason to keep buying components. A controlled loss of one listing is usually safer than using the next several customer rewards to rescue a flip whose finished value is still uncertain."], note: "Use the live prices in your game. Updates can change purchase costs, part availability and resale balance." }
     ],
-    sources: [steamStore, steamAchievements, achievementGuide, videoGuide],
+    sources: [steamStore, steamNews, steamAchievements, achievementGuide, videoGuide],
     related: [{ href: "/guides/beginners/", title: "Beginner's guide", description: "Build a stable cash loop." }, { href: "/achievements/", title: "Business achievements", description: "See official requirements." }, { href: "/game-info/", title: "Game info", description: "Check current official release facts." }]
   },
   {
     path: "/guides/firmware-and-customization/",
-    title: "ReStory Firmware, Reprogramming & Customization Guide",
+    title: "How to Update Firmware in ReStory (Unlock-ToolKit)",
     description: "Unlock ReStory reprogramming, diagnose firmware jobs and use airbrush paint or stickers without confusing three separate customization systems.",
     eyebrow: "Unlock matrix",
     answer: "In ReStory, firmware search intent maps to device reprogramming: buy the Unlock-ToolKit and install its CD. Painting needs the airbrush plus palettes; stickers are purchased separately.",
     evidence: "Community-tested",
     index: true,
     sections: [
+      { title: "What 1.0.011r fixed", paragraphs: ["The Aug 19 patch fixed the paint palette interface and several progression issues, but the official notes do not claim a universal fix for every firmware job. Recheck the paint UI on the current build; for reprogramming failures, continue with the Unlock-ToolKit checks below."], note: "Painting and firmware are separate systems even when the same customer order asks for both." },
       { title: "Three separate systems", table: { headers: ["Task", "What unlocks it", "Official achievement"], rows: [["Reprogram / firmware", "Unlock-ToolKit and its computer application", "Hacking 101 / 11001"], ["Paint", "Airbrush plus palette sets", "Custom orders available!"], ["Stickers", "Sticker sheets from the in-game shop", "Instant Cool / Instant Cool-er / Sticker Bombing"]] } },
       { title: "Reprogramming workflow", steps: [
         { title: "Buy the tool", body: "Current community guides place the Unlock-ToolKit in the tool shop area of the in-game browser." },
@@ -357,12 +376,12 @@ export const pages: PageRecord[] = [
         { title: "Report a reproducible sequence", body: "Include the game version, device, installed tool and exact steps on the Steam technical-issues board so the report can be compared with current fixes." }
       ], note: "ReStory reprogramming is an in-game task. It never requires downloading third-party firmware or changing real device drivers." }
     ],
-    sources: [steamAchievements, achievementGuide, videoGuide],
+    sources: [steamNews, steamAchievements, achievementGuide, videoGuide],
     related: [{ href: "/achievements/", title: "Customization achievements", description: "Check all official requirements." }, { href: "/guides/beginners/", title: "Beginner's guide", description: "Return to the core job loop." }, { href: "/faq/", title: "FAQ", description: "Check platform and progression boundaries." }]
   },
   {
     path: "/guides/troubleshooting/",
-    title: "ReStory Troubleshooting: Cleaning, Saves & Controls",
+    title: "ReStory Not Working? Cleaning, Save & Progress Fixes",
     description: "Fix common ReStory problems with cleaning, missing parts, stalled story progress, Steam Cloud, controller setup, Steam Deck and low performance.",
     eyebrow: "Get the shop moving again",
     answer: "Start with the task state, restart safely, then separate a missed interaction from a save, control or performance problem before changing files or reinstalling.",

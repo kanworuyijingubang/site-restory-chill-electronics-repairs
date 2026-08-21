@@ -1,8 +1,8 @@
 {
   "home": {
     "meta": {
-      "title": "ReStory: Chill Electronics Repairs Wiki & Guides",
-      "description": "Repair, clean, sell and customize devices in ReStory with practical guides for beginners, achievements, firmware, endings and common problems."
+      "title": "ReStory Wiki: Firmware, Selling & Repair Guides",
+      "description": "Solve ReStory firmware, selling, cleaning and repair problems with current, sourced guides plus patch notes, achievement checklists and shop-progression fixes."
     },
     "hero": {
       "eyebrow": "Your Repair-Shop Companion",
@@ -70,8 +70,8 @@
     "media": "https://steamcommunity.com/app/3812600/allnews/"
   },
   "metadata": {
-    "title": "ReStory: Chill Electronics Repairs Wiki & Guides",
-    "description": "Repair, clean, sell and customize devices in ReStory with practical guides for beginners, achievements, firmware, endings and common problems.",
+    "title": "ReStory Wiki: Firmware, Selling & Repair Guides",
+    "description": "Solve ReStory firmware, selling, cleaning and repair problems with current, sourced guides plus patch notes, achievement checklists and shop-progression fixes.",
     "keywords": "ReStory guide, ReStory wiki, ReStory achievements, ReStory firmware, ReStory troubleshooting"
   }
 }

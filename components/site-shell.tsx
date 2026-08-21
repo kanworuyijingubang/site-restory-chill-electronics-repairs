@@ -4,6 +4,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { SITE_NAME } from "@/lib/site-data";
 
 const nav = [
+  ["Updates", "/updates/"],
   ["Guides", "/guides/"],
   ["Achievements", "/achievements/"],
   ["Devices", "/devices/"],
@@ -44,7 +45,7 @@ export function SiteFooter() {
           <div className="brand footer-brand"><LogoMark /><span><strong>ReStory</strong><small>Repair Desk</small></span></div>
           <p>Independent guides for repairing devices, growing your shop and finishing ReStory. Official game media is credited to its respective owners.</p>
         </div>
-        <div><strong>Explore</strong><Link href="/guides/">Guides</Link><Link href="/achievements/">Achievements</Link><Link href="/devices/">Devices</Link></div>
+        <div><strong>Explore</strong><Link href="/updates/">Updates</Link><Link href="/guides/">Guides</Link><Link href="/achievements/">Achievements</Link><Link href="/devices/">Devices</Link></div>
         <div><strong>Trust</strong><Link href="/about/">About</Link><Link href="/contact/">Corrections</Link><Link href="/disclaimer/">Disclaimer</Link></div>
         <div><strong>Legal</strong><Link href="/privacy/">Privacy</Link><Link href="/cookies/">Cookies</Link><Link href="/terms/">Terms</Link></div>
       </div>
