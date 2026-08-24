@@ -1,6 +1,6 @@
 export const SITE_URL = "https://restory-chillelectronicsrepairs.wiki";
 export const SITE_NAME = "ReStory Repair Desk";
-export const UPDATED = "Aug 21, 2026";
+export const UPDATED = "Aug 24, 2026";
 
 export type Source = {
   label: string;
@@ -212,19 +212,20 @@ export const pages: PageRecord[] = [
   },
   {
     path: "/updates/",
-    title: "ReStory Update 1.0.011r: Patch Notes & Roadmap",
-    description: "ReStory 1.0.011r patch notes summarized: sonic-bath achievements, gadget inventory, paint UI and progression fixes, plus the dated September content plan.",
+    title: "ReStory Update 1.0.013r: Save Slots, Fixes & Roadmap",
+    description: "ReStory 1.0.013r patch notes summarized: five save slots, story and firmware fixes, marketplace rebalance, memory improvements and the September roadmap.",
     eyebrow: "Official update desk",
-    answer: "The latest official patch found on Aug 21 is 1.0.011r, released Aug 19. It makes sonic-bath cleaning count toward cleaning achievements, adds a button to place all gadget items into inventory and fixes paint, store, quest, achievement and performance issues. A free content update is announced for Sep 14; it is planned, not yet released.",
+    answer: "The latest official patch found on Aug 24 is 1.0.013r, released Aug 21. It adds five save slots and fixes story blockers, sonic-bath item loss, serious memory leaks, Intel Mac support, gamepad firmware controls, competitions and marketplace balance. A free content update is announced for Sep 14; it is planned, not yet released.",
     evidence: "Official facts",
     index: true,
     sections: [
-      { title: "What changed in 1.0.011r", bullets: ["Sonic-bath cleaning now counts toward the cleaning achievements.", "A new button places all gadget items into inventory at once.", "The paint interface and several uncleanable-part states were fixed.", "Fixes cover Brick Game quest items, minor-item store availability, Jack of all trades and Atari Lynx competition behavior.", "The patch also includes performance and audio fixes."] },
-      { title: "What this changes in the guides", table: { headers: ["Player task", "Current guidance"], rows: [["Cleaning achievements", "Automatic sonic-bath cleaning now counts as of 1.0.011r; manual cleaning remains useful for diagnosing a stuck part."], ["Gadget intake", "Use the new place-all button when moving gadget items into inventory."], ["Painting", "Recheck the palette UI on 1.0.011r before following an older workaround."], ["Legend of Akiba", "The Atari Lynx competition fix may resolve an older completion blocker."]] } },
+      { title: "What changed in 1.0.013r", bullets: ["Five save slots were added.", "Story blockers involving purchased licenses and main-quest order were fixed.", "Items should no longer be lost in the sonic bath, and serious memory leaks were fixed.", "Older Intel Macs, Asian fonts, gamepad tooltips, the dialogue selector and firmware controls received fixes.", "The marketplace was rebalanced, and IDB Thinkerdad, XI-Box, Atari Lynx, Blueberry Curl and Nony GoMan issues were addressed."] },
+      { title: "What this changes in the guides", table: { headers: ["Player task", "Current guidance"], rows: [["Save management", "Use the five slots to separate a stable story save from experiments; Steam Cloud conflicts still need timestamp checks."], ["Story progression", "Update to 1.0.013r before repeating license purchases or changing quest order to work around a blocker."], ["Firmware on gamepad", "Re-test firmware updating on the current build before switching input devices."], ["Marketplace selling", "Old profit thresholds may be stale after the marketplace rebalance; compare the live buy and resale values."], ["Cleaning achievements", "The earlier 1.0.011r change still makes sonic-bath cleaning count toward the cleaning achievements."]] } },
+      { title: "Still current from 1.0.011r", paragraphs: ["Sonic-bath cleaning counts toward cleaning achievements, the place-all gadget button remains available, and the paint interface, store items and several competition issues received fixes in the earlier patch. Keep those changes when comparing pre-August 19 guides."] },
       { title: "September 14 content update", paragraphs: ["The Aug 20 official announcement schedules the first free content update for Sep 14 with more story, a new character and a new gadget. These are roadmap items, not features in the current build."], note: "Check the official announcement again on or after Sep 14 before changing this page to say the content shipped." }
     ],
     sources: [steamNews],
-    related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning guide", description: "Use the corrected sonic-bath guidance." }, { href: "/guides/firmware-and-customization/", title: "Firmware & paint", description: "Separate reprogramming from paint fixes." }, { href: "/guides/how-to-sell-devices/", title: "Selling guide", description: "Use the updated inventory workflow." }]
+    related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning guide", description: "Use the corrected sonic-bath guidance." }, { href: "/guides/firmware-and-customization/", title: "Firmware & paint", description: "Use the 1.0.013r gamepad and progression fixes." }, { href: "/guides/how-to-sell-devices/", title: "Selling guide", description: "Recheck values after the marketplace rebalance." }]
   },
   {
     path: "/guides/",
@@ -315,7 +316,7 @@ export const pages: PageRecord[] = [
     evidence: "Official + community",
     index: true,
     sections: [
-      { title: "1.0.011r inventory and store changes", paragraphs: ["The Aug 19 patch added a button that places all gadget items into inventory and fixed a problem with minor items being available in the store. The new button speeds intake, but it does not replace the profit check below or guarantee that every repaired item can be sold immediately."], note: "Treat older UI screenshots as version-specific when the place-all button is missing." },
+      { title: "1.0.013r marketplace rebalance", paragraphs: ["The Aug 21 patch rebalanced the marketplace, so an old buy-price or resale example should not be treated as a fixed profit rule. Compare the current purchase price, missing parts and expected sale value before buying. The place-all gadget button added in 1.0.011r still speeds inventory intake, but it does not make a weak flip profitable."], note: "Treat older price screenshots and pre-1.0.013r profit thresholds as version-specific." },
       { title: "The buy → decide → sell loop", steps: [
         { title: "Unlock and open the marketplace", body: "The in-game browser becomes a major source of devices and parts as the shop progresses." },
         { title: "Read the listing", body: "Prefer a clear condition and a credible seller signal while learning the economy." },
@@ -349,7 +350,7 @@ export const pages: PageRecord[] = [
     evidence: "Community-tested",
     index: true,
     sections: [
-      { title: "What 1.0.011r fixed", paragraphs: ["The Aug 19 patch fixed the paint palette interface and several progression issues, but the official notes do not claim a universal fix for every firmware job. Recheck the paint UI on the current build; for reprogramming failures, continue with the Unlock-ToolKit checks below."], note: "Painting and firmware are separate systems even when the same customer order asks for both." },
+      { title: "What 1.0.013r changed", paragraphs: ["The Aug 21 patch says firmware updating now works on gamepad and fixes story blockers tied to purchased licenses and main-quest order. The earlier 1.0.011r patch fixed the paint palette interface. Update first, then re-test the exact firmware step before buying the Unlock-ToolKit again or switching input devices."], note: "Painting and firmware are separate systems even when the same customer order asks for both." },
       { title: "Three separate systems", table: { headers: ["Task", "What unlocks it", "Official achievement"], rows: [["Reprogram / firmware", "Unlock-ToolKit and its computer application", "Hacking 101 / 11001"], ["Paint", "Airbrush plus palette sets", "Custom orders available!"], ["Stickers", "Sticker sheets from the in-game shop", "Instant Cool / Instant Cool-er / Sticker Bombing"]] } },
       { title: "Reprogramming workflow", steps: [
         { title: "Buy the tool", body: "Current community guides place the Unlock-ToolKit in the tool shop area of the in-game browser." },
