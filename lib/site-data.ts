@@ -1,6 +1,6 @@
 export const SITE_URL = "https://restory-chillelectronicsrepairs.wiki";
 export const SITE_NAME = "ReStory Repair Desk";
-export const UPDATED = "Aug 24, 2026";
+export const UPDATED = "Aug 29, 2026";
 
 export type Source = {
   label: string;
@@ -215,7 +215,7 @@ export const pages: PageRecord[] = [
     title: "ReStory Update 1.0.013r: Save Slots, Fixes & Roadmap",
     description: "ReStory 1.0.013r patch notes summarized: five save slots, story and firmware fixes, marketplace rebalance, memory improvements and the September roadmap.",
     eyebrow: "Official update desk",
-    answer: "The latest official patch found on Aug 24 is 1.0.013r, released Aug 21. It adds five save slots and fixes story blockers, sonic-bath item loss, serious memory leaks, Intel Mac support, gamepad firmware controls, competitions and marketplace balance. A free content update is announced for Sep 14; it is planned, not yet released.",
+    answer: "The latest official patch found on Aug 29 is still 1.0.013r, released Aug 21. It adds five save slots and fixes story blockers, sonic-bath item loss, serious memory leaks, Intel Mac support, gamepad firmware controls, competitions and marketplace balance. A free content update is announced for Sep 14; it is planned, not yet released.",
     evidence: "Official facts",
     index: true,
     sections: [
