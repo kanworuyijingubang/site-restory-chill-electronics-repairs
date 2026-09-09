@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { achievementGroups, deviceGroups, pageByPath, type PageRecord, UPDATED } from "@/lib/site-data";
+import { achievementGroups, deviceGroups, pageByPath, type PageRecord, pageUpdatedDate, pageCheckedDate, formatPageDate } from "@/lib/site-data";
 
 function Breadcrumbs({ path, title }: { path: string; title: string }) {
   const parts = path.split("/").filter(Boolean);
@@ -93,7 +93,7 @@ function FAQs({ items }: { items: NonNullable<PageRecord["faq"]> }) {
 
 function Sources({ page }: { page: PageRecord }) {
   if (!page.sources?.length) return null;
-  return <section className="sources"><h2>Sources</h2><p>Last checked {UPDATED}. Game behavior can change after an update, so use the linked Steam pages for the newest information.</p><ul>{page.sources.map((source) => <li key={source.url}><span className={`source-kind ${source.kind}`}>{source.kind}</span><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></section>;
+  return <section className="sources"><h2>Sources</h2><p>Last checked {formatPageDate(pageCheckedDate(page))}. Game behavior can change after an update, so use the linked Steam pages for the newest information.</p><ul>{page.sources.map((source) => <li key={source.url}><span className={`source-kind ${source.kind}`}>{source.kind}</span><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}</ul></section>;
 }
 
 function Related({ links }: { links?: PageRecord["related"] }) {
@@ -113,7 +113,7 @@ export function ContentRenderer({ page }: { page: PageRecord }) {
             <div className="eyebrow"><span />{page.eyebrow}</div>
             <h1>{page.title}</h1>
             <p className="answer">{page.answer}</p>
-            <div className="status-row"><span className="status-chip">Updated {UPDATED}</span>{page.spoiler && <span className="status-chip spoiler-chip">Spoilers</span>}</div>
+            <div className="status-row"><span className="status-chip">Updated {formatPageDate(pageUpdatedDate(page))}</span>{page.spoiler && <span className="status-chip spoiler-chip">Spoilers</span>}</div>
             {home && <div className="hero-actions"><Link className="button primary-button" href="/guides/">Open guide desk</Link><Link className="button ghost-button" href="/achievements/">Track achievements</Link></div>}
           </div>
           {!legal && <HeroMedia path={page.path} home={home} />}

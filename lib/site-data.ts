@@ -1,6 +1,20 @@
 export const SITE_URL = "https://restory-chillelectronicsrepairs.wiki";
 export const SITE_NAME = "ReStory Repair Desk";
-export const UPDATED = "Aug 29, 2026";
+const DEFAULT_CHECKED_DATE = "2026-08-29";
+
+export function pageUpdatedDate(page: PageRecord): string {
+  return page.updated ?? DEFAULT_CHECKED_DATE;
+}
+
+export function pageCheckedDate(page: PageRecord): string {
+  return page.checked ?? DEFAULT_CHECKED_DATE;
+}
+
+export function formatPageDate(date: string): string {
+  return new Date(`${date}T00:00:00Z`).toLocaleDateString("en-US", {
+    month: "short", day: "numeric", year: "numeric", timeZone: "UTC",
+  });
+}
 
 export type Source = {
   label: string;
@@ -29,6 +43,8 @@ export type FaqItem = { question: string; answer: string };
 
 export type PageRecord = {
   path: string;
+  updated?: string;
+  checked?: string;
   title: string;
   description: string;
   eyebrow: string;
@@ -212,19 +228,21 @@ export const pages: PageRecord[] = [
   },
   {
     path: "/updates/",
+    updated: "2026-09-09",
+    checked: "2026-09-09",
     title: "ReStory Update 1.0.013r: Save Slots, Fixes & Roadmap",
     description: "ReStory 1.0.013r patch notes summarized: five save slots, story and firmware fixes, marketplace rebalance, memory improvements and the September roadmap.",
     eyebrow: "Official update desk",
-    answer: "The latest official patch found on Aug 29 is still 1.0.013r, released Aug 21. It adds five save slots and fixes story blockers, sonic-bath item loss, serious memory leaks, Intel Mac support, gamepad firmware controls, competitions and marketplace balance. A free content update is announced for Sep 14; it is planned, not yet released.",
+    answer: "As of September 9, the latest official patch announcement remains 1.0.013r, released Aug 21. It adds five save slots and fixes story blockers, sonic-bath item loss, serious memory leaks, Intel Mac support, gamepad firmware controls, competitions and marketplace balance. The developer plans to share content-update news and a roadmap on September 14. That is an announcement date, not a confirmed release date for the free content update.",
     evidence: "Official facts",
     index: true,
     sections: [
       { title: "What changed in 1.0.013r", bullets: ["Five save slots were added.", "Story blockers involving purchased licenses and main-quest order were fixed.", "Items should no longer be lost in the sonic bath, and serious memory leaks were fixed.", "Older Intel Macs, Asian fonts, gamepad tooltips, the dialogue selector and firmware controls received fixes.", "The marketplace was rebalanced, and IDB Thinkerdad, XI-Box, Atari Lynx, Blueberry Curl and Nony GoMan issues were addressed."] },
       { title: "What this changes in the guides", table: { headers: ["Player task", "Current guidance"], rows: [["Save management", "Use the five slots to separate a stable story save from experiments; Steam Cloud conflicts still need timestamp checks."], ["Story progression", "Update to 1.0.013r before repeating license purchases or changing quest order to work around a blocker."], ["Firmware on gamepad", "Re-test firmware updating on the current build before switching input devices."], ["Marketplace selling", "Old profit thresholds may be stale after the marketplace rebalance; compare the live buy and resale values."], ["Cleaning achievements", "The earlier 1.0.011r change still makes sonic-bath cleaning count toward the cleaning achievements."]] } },
       { title: "Still current from 1.0.011r", paragraphs: ["Sonic-bath cleaning counts toward cleaning achievements, the place-all gadget button remains available, and the paint interface, store items and several competition issues received fixes in the earlier patch. Keep those changes when comparing pre-August 19 guides."] },
-      { title: "September 14 content update", paragraphs: ["The Aug 20 official announcement schedules the first free content update for Sep 14 with more story, a new character and a new gadget. These are roadmap items, not features in the current build."], note: "Check the official announcement again on or after Sep 14 before changing this page to say the content shipped." }
+      { title: "September 14: update news and roadmap", paragraphs: ["The August 20 announcement says news about the first free content update and a longer-term roadmap will be shared on September 14. More story, a new character and a new gadget are planned, but the announcement does not confirm that they will be released that day."], note: "September 9 status: the free content update has no confirmed release date in this announcement. Check the developer’s September 14 news for the next details." }
     ],
-    sources: [steamNews],
+    sources: [{ label: "Official September 14 news announcement — August 20", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228666438", kind: "official" }, { label: "Official Patch 1.0.013r — August 21", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228668923", kind: "official" }, steamNews],
     related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning guide", description: "Use the corrected sonic-bath guidance." }, { href: "/guides/firmware-and-customization/", title: "Firmware & paint", description: "Use the 1.0.013r gamepad and progression fixes." }, { href: "/guides/how-to-sell-devices/", title: "Selling guide", description: "Recheck values after the marketplace rebalance." }]
   },
   {
@@ -343,10 +361,11 @@ export const pages: PageRecord[] = [
   },
   {
     path: "/guides/firmware-and-customization/",
+    updated: "2026-09-09",
     title: "How to Update Firmware in ReStory (Unlock-ToolKit)",
     description: "Unlock ReStory reprogramming, diagnose firmware jobs and use airbrush paint or stickers without confusing three separate customization systems.",
     eyebrow: "Unlock matrix",
-    answer: "In ReStory, firmware search intent maps to device reprogramming: buy the Unlock-ToolKit and install its CD. Painting needs the airbrush plus palettes; stickers are purchased separately.",
+    answer: "To update a device’s firmware in ReStory, buy the Unlock-ToolKit and install its CD. Painting needs the airbrush plus palettes; stickers are purchased separately.",
     evidence: "Community-tested",
     index: true,
     sections: [
@@ -522,6 +541,7 @@ export const pages: PageRecord[] = [
   },
   {
     path: "/about/",
+    updated: "2026-09-09",
     title: "About ReStory Repair Desk",
     description: "How ReStory Repair Desk researches, labels, updates and corrects its game guides.",
     eyebrow: "About this guide",
@@ -531,14 +551,15 @@ export const pages: PageRecord[] = [
     sections: [
       { title: "What you will find here", bullets: ["Direct guides for common repair, shop and progression tasks.", "Current Steam links for platforms, achievements and game announcements.", "Player-tested tips clearly separated from official facts.", "Corrections when an update changes a mechanic or route."] },
       { title: "Independence", paragraphs: ["This site is not affiliated with Mandragora, tinyBuild, Valve or Steam. Game names and trademarks belong to their respective owners."] },
-      { title: "Corrections", paragraphs: ["Use the public repository's Issues area to report a source conflict, patch change, broken link or accessibility problem. Include the page URL and a current source."] }
+      { title: "Corrections", paragraphs: ["Use the public repository's Issues area to report conflicting information, a patch change, broken link or accessibility problem. Include the page URL and a current source."] }
     ],
     related: [{ href: "/contact/", title: "Contact & corrections", description: "Report a problem with a page." }, { href: "/disclaimer/", title: "Disclaimer", description: "Read the unofficial-site notice." }, { href: "/", title: "Guide home", description: "Return to ReStory tasks." }]
   },
   {
     path: "/contact/",
+    updated: "2026-09-09",
     title: "Contact & Corrections",
-    description: "Report a ReStory guide correction, source conflict, broken link or accessibility issue.",
+    description: "Report a ReStory guide correction, conflicting information, broken link or accessibility issue.",
     eyebrow: "Corrections desk",
     answer: "Report corrections through the public GitHub Issues page and include the affected URL, current game version and a source.",
     evidence: "Site information",
