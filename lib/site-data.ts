@@ -212,6 +212,7 @@ const commonRelated = [
 export const pages: PageRecord[] = [
   {
     path: "/",
+    updated: "2026-09-18",
     title: "ReStory Wiki: Firmware, Selling & Repair Guides",
     description: "Solve ReStory firmware, selling, cleaning and repair problems with current, sourced guides plus patch notes, achievement checklists and shop-progression fixes.",
     eyebrow: "Your repair-shop companion",
@@ -219,30 +220,32 @@ export const pages: PageRecord[] = [
     evidence: "Official + community",
     index: true,
     sections: [
+      { title: "Next free update: September 21", paragraphs: ["A free content update is planned for September 21, with more story, a new character and a new device to repair. Kaito and Haruhi are returning. The September 14 announcement confirms the new date; the update is still upcoming as of September 18."] },
       { title: "Start with what you are trying to do", intro: "Choose the guide that matches the problem on your workbench right now.", bullets: ["New shop: learn the inspect → repair → deliver → reinvest loop.", "Repair stuck: clean every side, track loose parts and rebuild in reverse order.", "Progression stuck: check licenses, computer apps, active orders and the end-of-day trigger.", "Completion run: use the achievement list and the 29-device Legend of Akiba checklist."] },
       { title: "ReStory at a glance", table: { headers: ["What players ask", "Current answer"], rows: [["Release date", "Aug 6, 2026"], ["Where to play", "Windows and macOS on Steam"], ["Achievements", "50"], ["Developer / publisher", "Mandragora / tinyBuild"], ["Setting", "A mid-2000s Tokyo electronics repair shop"]] }, note: "For today's regional price, controller details and future platform announcements, open the official Steam page." },
       { title: "Four good places to begin", bullets: ["Open the beginner guide before buying tools or licenses at random.", "Use cleaning and reassembly help when a device will not complete.", "Use the marketplace guide before spending your bill reserve on a broken device.", "Open troubleshooting when restarting the same task is not solving the problem."] }
     ],
-    sources: [steamStore, steamAchievements, steamGuides, steamNews],
-    related: guideLinks
+    sources: [{ label: "September 21 free content update — official announcement", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262701960", kind: "official" }, steamStore, steamAchievements, steamGuides, steamNews],
+    related: [{ href: "/updates/", title: "September 21 update plans", description: "See what is announced and what is already in the current patch." }, ...guideLinks]
   },
   {
     path: "/updates/",
-    updated: "2026-09-09",
-    checked: "2026-09-09",
-    title: "ReStory Update 1.0.013r: Save Slots, Fixes & Roadmap",
-    description: "ReStory 1.0.013r patch notes summarized: five save slots, story and firmware fixes, marketplace rebalance, memory improvements and the September roadmap.",
+    updated: "2026-09-18",
+    checked: "2026-09-18",
+    title: "ReStory Free Update: September 21 Plans & Latest Patch",
+    description: "ReStory's free content update is planned for September 21: returning characters, a new device and more story. Read the announcement and 1.0.013r patch notes.",
     eyebrow: "Official update desk",
-    answer: "As of September 9, the latest official patch announcement remains 1.0.013r, released Aug 21. It adds five save slots and fixes story blockers, sonic-bath item loss, serious memory leaks, Intel Mac support, gamepad firmware controls, competitions and marketplace balance. The developer plans to share content-update news and a roadmap on September 14. That is an announcement date, not a confirmed release date for the free content update.",
+    answer: "ReStory's free content update is scheduled for September 21, 2026, according to the developer's September 14 announcement. It promises more story, a new character and a new device to repair, with Kaito and Haruhi returning. As of September 18, it has not been announced as released; 1.0.013r, published August 21, remains the latest patch announcement.",
     evidence: "Official facts",
     index: true,
     sections: [
+      { title: "Free content update planned for September 21", paragraphs: ["The developer moved the free content update from September 14 to September 21 to allow more time to finish it. The new announcement promises a new character, a new repairable device and a story addition.", "Kaito and Haruhi return as an actor and an engineer, helping a game-development star visiting the city. The announcement does not name the new device or explain how to unlock the story."], note: "September 18 status: upcoming. A scheduled date does not mean the content is already available. Check the official announcement before looking for new orders or devices in your save." },
       { title: "What changed in 1.0.013r", bullets: ["Five save slots were added.", "Story blockers involving purchased licenses and main-quest order were fixed.", "Items should no longer be lost in the sonic bath, and serious memory leaks were fixed.", "Older Intel Macs, Asian fonts, gamepad tooltips, the dialogue selector and firmware controls received fixes.", "The marketplace was rebalanced, and IDB Thinkerdad, XI-Box, Atari Lynx, Blueberry Curl and Nony GoMan issues were addressed."] },
       { title: "What this changes in the guides", table: { headers: ["Player task", "Current guidance"], rows: [["Save management", "Use the five slots to separate a stable story save from experiments; Steam Cloud conflicts still need timestamp checks."], ["Story progression", "Update to 1.0.013r before repeating license purchases or changing quest order to work around a blocker."], ["Firmware on gamepad", "Re-test firmware updating on the current build before switching input devices."], ["Marketplace selling", "Old profit thresholds may be stale after the marketplace rebalance; compare the live buy and resale values."], ["Cleaning achievements", "The earlier 1.0.011r change still makes sonic-bath cleaning count toward the cleaning achievements."]] } },
       { title: "Still current from 1.0.011r", paragraphs: ["Sonic-bath cleaning counts toward cleaning achievements, the place-all gadget button remains available, and the paint interface, store items and several competition issues received fixes in the earlier patch. Keep those changes when comparing pre-August 19 guides."] },
-      { title: "September 14: update news and roadmap", paragraphs: ["The August 20 announcement says news about the first free content update and a longer-term roadmap will be shared on September 14. More story, a new character and a new gadget are planned, but the announcement does not confirm that they will be released that day."], note: "September 9 status: the free content update has no confirmed release date in this announcement. Check the developer’s September 14 news for the next details." }
+
     ],
-    sources: [{ label: "Official September 14 news announcement — August 20", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228666438", kind: "official" }, { label: "Official Patch 1.0.013r — August 21", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228668923", kind: "official" }, steamNews],
+    sources: [{ label: "Free content update scheduled for September 21 — September 14 announcement", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262701960", kind: "official" }, { label: "Content update delay and tinyBuild Connect — September 10", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262692514", kind: "official" }, { label: "Official Patch 1.0.013r — August 21", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228668923", kind: "official" }, steamNews],
     related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning guide", description: "Use the corrected sonic-bath guidance." }, { href: "/guides/firmware-and-customization/", title: "Firmware & paint", description: "Use the 1.0.013r gamepad and progression fixes." }, { href: "/guides/how-to-sell-devices/", title: "Selling guide", description: "Recheck values after the marketplace rebalance." }]
   },
   {
