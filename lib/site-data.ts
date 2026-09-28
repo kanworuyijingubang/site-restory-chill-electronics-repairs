@@ -106,6 +106,62 @@ const steamNews: Source = {
   kind: "official"
 };
 
+const saleGuide: Source = {
+  label: "seebs: Quick Guide To Making Money — counter sale instructions",
+  url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3786123222",
+  kind: "community"
+};
+const currentAchievementGuide: Source = {
+  label: "Kleynce: toolkit, workshop cleaning and Akiba app instructions",
+  url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3778809808",
+  kind: "community"
+};
+const firmwareDiscussion: Source = {
+  label: "Firmware controls — player answer and successful follow-up, Aug 11–12",
+  url: "https://steamcommunity.com/app/3812600/discussions/0/592938395265677665/?l=english",
+  kind: "community"
+};
+const firmwareVideo: Source = {
+  label: "Zhain gameplay: ThinkerDad firmware progress and success, 9:32:20–9:32:45",
+  url: "https://www.youtube.com/watch?v=x6lq9h_5Xa0&t=34340s",
+  kind: "community"
+};
+const guitarFirmwareFix: Source = {
+  label: "Developer: guitars no longer need firmware upgrades — Aug 11, comment 5",
+  url: "https://steamcommunity.com/app/3812600/eventcomments/588434705716664547/",
+  kind: "official"
+};
+const storyHotfix: Source = {
+  label: "Developer-marked answer: 1.0.015 guitar story hotfix and old-save limitation",
+  url: "https://steamcommunity.com/app/3812600/discussions/0/592938395265855858/",
+  kind: "official"
+};
+const storyReports: Source = {
+  label: "Story progression: developer checklist and later player reports",
+  url: "https://steamcommunity.com/app/3812600/discussions/1/588434705716678198/",
+  kind: "community"
+};
+const saveLocations: Source = {
+  label: "Developer bug-report instructions: Windows, Mac and Steam Deck data folders",
+  url: "https://steamcommunity.com/app/3812600/discussions/1/588434161796244300/",
+  kind: "official"
+};
+const saveLog: Source = {
+  label: "Player game log: Windows Restory/SaveData folder",
+  url: "https://steamcommunity.com/app/3812600/discussions/1/588434161796261648/",
+  kind: "community"
+};
+const akibaRecordHelp: Source = {
+  label: "Developer: compare original competition times to find missed wins",
+  url: "https://steamcommunity.com/app/3812600/discussions/1/588434434320041824/",
+  kind: "official"
+};
+const sonicBathPatch: Source = {
+  label: "Official 1.0.011r patch: sonic-bath cleaning counts toward achievements",
+  url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228663460",
+  kind: "official"
+};
+
 export const guideLinks: RelatedLink[] = [
   { href: "/updates/", title: "Latest updates", description: "Read the current patch changes and dated roadmap notes." },
   { href: "/guides/beginners/", title: "Beginner's guide", description: "Learn the repair and shop-management loop." },
@@ -212,7 +268,8 @@ const commonRelated = [
 export const pages: PageRecord[] = [
   {
     path: "/",
-    updated: "2026-09-18",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
     title: "ReStory Wiki: Firmware, Selling & Repair Guides",
     description: "Solve ReStory firmware, selling, cleaning and repair problems with current, sourced guides plus patch notes, achievement checklists and shop-progression fixes.",
     eyebrow: "Your repair-shop companion",
@@ -220,32 +277,34 @@ export const pages: PageRecord[] = [
     evidence: "Official + community",
     index: true,
     sections: [
-      { title: "Next free update: September 21", paragraphs: ["A free content update is planned for September 21, with more story, a new character and a new device to repair. Kaito and Haruhi are returning. The September 14 announcement confirms the new date; the update is still upcoming as of September 18."] },
+      { title: "Free content update delayed", paragraphs: ["The free update previously planned for September 21 has been delayed. The developer's September 18 announcement says the content is ready, but clearing a collaboration took longer than expected. No replacement date or release announcement was found in the official news feed checked on September 28. More story, a new character and a new repairable device remain announced content."] },
       { title: "Start with what you are trying to do", intro: "Choose the guide that matches the problem on your workbench right now.", bullets: ["New shop: learn the inspect → repair → deliver → reinvest loop.", "Repair stuck: clean every side, track loose parts and rebuild in reverse order.", "Progression stuck: check licenses, computer apps, active orders and the end-of-day trigger.", "Completion run: use the achievement list and the 29-device Legend of Akiba checklist."] },
       { title: "ReStory at a glance", table: { headers: ["What players ask", "Current answer"], rows: [["Release date", "Aug 6, 2026"], ["Where to play", "Windows and macOS on Steam"], ["Achievements", "50"], ["Developer / publisher", "Mandragora / tinyBuild"], ["Setting", "A mid-2000s Tokyo electronics repair shop"]] }, note: "For today's regional price, controller details and future platform announcements, open the official Steam page." },
       { title: "Four good places to begin", bullets: ["Open the beginner guide before buying tools or licenses at random.", "Use cleaning and reassembly help when a device will not complete.", "Use the marketplace guide before spending your bill reserve on a broken device.", "Open troubleshooting when restarting the same task is not solving the problem."] }
     ],
-    sources: [{ label: "September 21 free content update — official announcement", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262701960", kind: "official" }, steamStore, steamAchievements, steamGuides, steamNews],
-    related: [{ href: "/updates/", title: "September 21 update plans", description: "See what is announced and what is already in the current patch." }, ...guideLinks]
+    sources: [{ label: "September update delay — September 18 official announcement", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010495350", kind: "official" }, { label: "Free content preview — September 14 official announcement", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262701960", kind: "official" }, steamStore, steamAchievements, steamGuides, steamNews],
+    related: [{ href: "/updates/", title: "Free update delay & latest patch", description: "Read the revised update status and the latest published patch notes." }, ...guideLinks]
   },
   {
     path: "/updates/",
-    updated: "2026-09-18",
-    checked: "2026-09-18",
-    title: "ReStory Free Update: September 21 Plans & Latest Patch",
-    description: "ReStory's free content update is planned for September 21: returning characters, a new device and more story. Read the announcement and 1.0.013r patch notes.",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
+    title: "ReStory Free Update Delayed: Status & Latest Patch",
+    description: "ReStory's September 21 free update was delayed, with no new date announced as of September 28. Read the official delay, 1.0.015 story hotfix and earlier patch notes.",
     eyebrow: "Official update desk",
-    answer: "ReStory's free content update is scheduled for September 21, 2026, according to the developer's September 14 announcement. It promises more story, a new character and a new device to repair, with Kaito and Haruhi returning. As of September 18, it has not been announced as released; 1.0.013r, published August 21, remains the latest patch announcement.",
+    answer: "ReStory's free content update was delayed beyond September 21, 2026. The developer announced the delay on September 18 without setting a replacement date. The official news feed checked on September 28 contains no later release announcement; the news feed’s latest full patch post is 1.0.013r, but a separate developer forum answer confirms a later 1.0.015 story hotfix.",
     evidence: "Official facts",
     index: true,
     sections: [
-      { title: "Free content update planned for September 21", paragraphs: ["The developer moved the free content update from September 14 to September 21 to allow more time to finish it. The new announcement promises a new character, a new repairable device and a story addition.", "Kaito and Haruhi return as an actor and an engineer, helping a game-development star visiting the city. The announcement does not name the new device or explain how to unlock the story."], note: "September 18 status: upcoming. A scheduled date does not mean the content is already available. Check the official announcement before looking for new orders or devices in your save." },
+      { title: "Why the September 21 update was delayed", paragraphs: ["The September 18 announcement supersedes the earlier September 21 schedule. The developer says the update itself is ready, but clearing a collaboration for the update took longer than expected. The team plans to share more news in the coming weeks; it did not give a new release date."], note: "Status checked September 28: delayed, with no later release announcement in the official news feed. The old September 21 date does not confirm that new orders or devices are available in your save." },
+      { title: "What content has been announced", paragraphs: ["The September 14 preview promises a new character, a new repairable device and more story. Kaito and Haruhi return as an actor and an engineer, helping a game-development star visiting the city.", "The September 18 post includes a device teaser, but its text does not identify the device or explain how to unlock the story. A device name, unlock guide and confirmed release status still need an official announcement."] },
+      { title: "The later 1.0.015 story hotfix", paragraphs: ["A developer-marked answer on Steam confirms hotfix 1.0.015 for the story freeze after the rock musician's guitar, often accompanied by a three-star result. The developer warns that saves begun before 1.0.013 and already blocked might not recover from that fix.", "This hotfix is documented in a forum answer rather than the full-patch announcement feed. It does not establish that the delayed free content update has launched, and it is not a guarantee that every story-progression issue is fixed."] },
       { title: "What changed in 1.0.013r", bullets: ["Five save slots were added.", "Story blockers involving purchased licenses and main-quest order were fixed.", "Items should no longer be lost in the sonic bath, and serious memory leaks were fixed.", "Older Intel Macs, Asian fonts, gamepad tooltips, the dialogue selector and firmware controls received fixes.", "The marketplace was rebalanced, and IDB Thinkerdad, XI-Box, Atari Lynx, Blueberry Curl and Nony GoMan issues were addressed."] },
-      { title: "What this changes in the guides", table: { headers: ["Player task", "Current guidance"], rows: [["Save management", "Use the five slots to separate a stable story save from experiments; Steam Cloud conflicts still need timestamp checks."], ["Story progression", "Update to 1.0.013r before repeating license purchases or changing quest order to work around a blocker."], ["Firmware on gamepad", "Re-test firmware updating on the current build before switching input devices."], ["Marketplace selling", "Old profit thresholds may be stale after the marketplace rebalance; compare the live buy and resale values."], ["Cleaning achievements", "The earlier 1.0.011r change still makes sonic-bath cleaning count toward the cleaning achievements."]] } },
+      { title: "What this changes in the guides", table: { headers: ["Player task", "Current guidance"], rows: [["Save management", "Use the five slots to separate a stable story save from experiments; Steam Cloud conflicts still need timestamp checks."], ["Story progression", "Install current updates; 1.0.015 specifically targets the rock-musician guitar freeze, with a limitation for older already-blocked saves."], ["Firmware on gamepad", "Re-test firmware updating on the current build before switching input devices."], ["Marketplace selling", "Old profit thresholds may be stale after the marketplace rebalance; compare the live buy and resale values."], ["Cleaning achievements", "The earlier 1.0.011r change still makes sonic-bath cleaning count toward the cleaning achievements."]] } },
       { title: "Still current from 1.0.011r", paragraphs: ["Sonic-bath cleaning counts toward cleaning achievements, the place-all gadget button remains available, and the paint interface, store items and several competition issues received fixes in the earlier patch. Keep those changes when comparing pre-August 19 guides."] },
 
     ],
-    sources: [{ label: "Free content update scheduled for September 21 — September 14 announcement", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262701960", kind: "official" }, { label: "Content update delay and tinyBuild Connect — September 10", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262692514", kind: "official" }, { label: "Official Patch 1.0.013r — August 21", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228668923", kind: "official" }, steamNews],
+    sources: [storyHotfix, { label: "September Update Timeline — September 18 delay announcement", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010495350", kind: "official" }, { label: "Free content preview — September 14 announcement (date superseded)", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262701960", kind: "official" }, { label: "Official Patch 1.0.013r — August 21", url: "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228668923", kind: "official" }, steamNews],
     related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning guide", description: "Use the corrected sonic-bath guidance." }, { href: "/guides/firmware-and-customization/", title: "Firmware & paint", description: "Use the 1.0.013r gamepad and progression fixes." }, { href: "/guides/how-to-sell-devices/", title: "Selling guide", description: "Recheck values after the marketplace rebalance." }]
   },
   {
@@ -299,6 +358,8 @@ export const pages: PageRecord[] = [
   },
   {
     path: "/guides/cleaning-and-reassembly/",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
     title: "ReStory: Clean Every Part & Reassemble Devices",
     description: "Find the last dirty or missing part in ReStory, choose the right cleaning method and rebuild devices in the correct dependency order without wasting parts.",
     eyebrow: "Repair checklist",
@@ -306,6 +367,11 @@ export const pages: PageRecord[] = [
     evidence: "Official + community",
     index: true,
     sections: [
+      { title: "Clean Job: clean the workshop itself", steps: [
+        { title: "Find the workshop rubbish", body: "For Clean Job, clear the dirty items from the desk. Cleaning device components is a separate task." },
+        { title: "Use the trash can below the desk", body: "The Steam achievement guide says to put those workshop items in the bin below." },
+        { title: "Check both side views", body: "Switch left and right to find the remaining rubbish outside the center view, then clear it too." }
+      ] },
       { title: "Find the part you missed", steps: [
         { title: "Change the view", body: "Check the center, left and right areas of the workspace; small items can sit outside the first view." },
         { title: "Use the task cues", body: "The notepad can identify the remaining category and highlight relevant pieces during normal jobs." },
@@ -325,89 +391,83 @@ export const pages: PageRecord[] = [
       ], note: "The cleaning-container workflow comes from repeated community reports. Menus and interaction details can change after updates." },
       { title: "Finish with a two-pass inspection", paragraphs: ["First, inspect the assembled model and use the task feedback to find an incomplete category. Second, scan every bench area for anything still loose. A device can look finished while a tiny fastener or bracket remains outside it, and a clean device can still be incomplete because the wrong replacement part was used.", "Do not buy another component until both passes are complete. Extra parts reduce your bill reserve and can create more clutter without solving the job. If everything is installed and the requirement still does not advance, move to the troubleshooting guide and diagnose the sequence as a possible progress or save-state problem."] }
     ],
-    sources: [steamAchievements, steamNews, achievementGuide, videoGuide],
+    sources: [steamAchievements, sonicBathPatch, currentAchievementGuide, videoGuide],
     related: [{ href: "/guides/beginners/", title: "Beginner's guide", description: "Review the full job loop." }, { href: "/achievements/", title: "Cleaning achievements", description: "Track official thresholds." }, { href: "/guides/legend-of-akiba/", title: "Akiba checklist", description: "Prepare for no-hint assembly." }]
   },
   {
     path: "/guides/how-to-sell-devices/",
-    title: "How to Sell Items in ReStory (Marketplace Guide)",
-    description: "Use ReStory's marketplace without draining your bill reserve: compare total repair cost, choose a flip or donor, finish the device and sell safely.",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
+    title: "How to Sell Items in ReStory: Counter & Courier Steps",
+    description: "Sell a repaired device in ReStory by moving it to the shop counter for courier payment, then check the live sale value against your purchase and repair costs.",
     eyebrow: "Marketplace workflow",
-    answer: "Buy only after comparing the device's condition, seller signal, missing parts and likely resale path; otherwise use it as a parts donor instead of forcing a loss-making repair.",
+    answer: "To sell a device you own, repair and fully assemble it, then drag the finished device to the shop counter. The courier collects it and leaves payment, according to the Steam money-making guide. The marketplace is where you buy stock; the counter completes the sale.",
     evidence: "Official + community",
     index: true,
     sections: [
-      { title: "1.0.013r marketplace rebalance", paragraphs: ["The Aug 21 patch rebalanced the marketplace, so an old buy-price or resale example should not be treated as a fixed profit rule. Compare the current purchase price, missing parts and expected sale value before buying. The place-all gadget button added in 1.0.011r still speeds inventory intake, but it does not make a weak flip profitable."], note: "Treat older price screenshots and pre-1.0.013r profit thresholds as version-specific." },
-      { title: "The buy → decide → sell loop", steps: [
-        { title: "Unlock and open the marketplace", body: "The in-game browser becomes a major source of devices and parts as the shop progresses." },
-        { title: "Read the listing", body: "Prefer a clear condition and a credible seller signal while learning the economy." },
-        { title: "Inspect total cost", body: "Add purchase price, missing components and repair time before committing to a flip." },
-        { title: "Choose repair or donor", body: "If a complete repair is uneconomic, dismantle the item for parts you will actually use." },
-        { title: "Finish before listing", body: "Clean, repair and reassemble the sellable device; avoid assuming a dirty or incomplete item will produce the intended margin." }
-      ] },
-      { title: "Achievement anchors", table: { headers: ["Achievement", "Official requirement"], rows: [["Flipper", "Buy 5 marketplace devices"], ["Garage sale!", "Buy 25 marketplace devices"], ["Making money!", "Sell 5 devices"], ["Business Shark", "Earn more than ¥100,000 in a day"], ["Millionaire!", "Earn ¥1,000,000"]] } },
-      { title: "Avoid the common trap", paragraphs: ["A rare or broken item is not automatically profitable. If required parts cost more than the likely finished value, keep the useful components and move on. Maintain a bill reserve before buying speculative inventory."], note: "Prices and balance can change. Judge each listing with the values shown in your current game instead of copying an old margin." },
-      { title: "Calculate the real cost before you buy", paragraphs: ["The listing price is only the first cost. Add the replacement parts you can already identify, the possibility of a missing component that is not visible from the listing and the time required to clean, repair and reassemble the device. A cheap shell with several unavailable internals can tie up more money than a cleaner, more complete listing.", "Then compare the project with your alternatives. The same cash might buy a license that opens dependable customer work, a tool that speeds every future repair or the parts needed to finish an existing order. Marketplace buying is strongest when it supports the shop's current plan, not when it competes with bills and guaranteed jobs for the last money in the account."] },
-      { title: "Choose one role for the device", table: { headers: ["Role", "When it makes sense", "What to avoid"], rows: [["Repair and sell", "Condition is understandable and the full repair cost leaves room for a return", "Buying before checking missing parts"], ["Parts donor", "Several components solve current or likely orders", "Repairing the empty shell just because you own it"], ["Practice project", "You want familiarity with a device before an Akiba competition", "Using the bill reserve for optional practice"], ["Hold", "A required part or license is not available yet", "Adding more unfinished inventory without a plan"]] } },
-      { title: "Prepare a device for sale", steps: [
-        { title: "Complete the intended repairs", body: "Replace or repair the components that prevent the device from reaching a finished state." },
-        { title: "Clean every required part", body: "A working but dirty item may not produce the outcome you expected, so use the same inspection routine as a customer job." },
-        { title: "Reassemble completely", body: "Check that no screw, cover, battery or bracket remains on the bench before you list the item." },
-        { title: "Review total spending", body: "Count the purchase and replacement costs so the sale is measured against the whole project rather than the final part." },
-        { title: "Keep the next bill covered", body: "A successful sale should improve the shop's position; do not immediately recycle all proceeds into another uncertain device." }
-      ] },
-      { title: "What to do with stripped or unwanted devices", paragraphs: ["Current Steam discussions include repeated questions from players who removed useful parts and were left with a device body they did not want. Do not assume there is a universal discard action if your current interface does not show one. First check whether the remaining object can be completed, sold later or stored without blocking an active order.", "Before creating another stripped shell, decide exactly which components you need and whether buying them directly is available. A donor is useful when its parts solve more value than the donor consumes. If the game does not provide the disposal option you expect, check the latest discussion and patch notes rather than buying additional inventory to work around it."] }
-      ,{ title: "Use a simple purchase limit", paragraphs: ["Choose a cash floor that stays untouched for bills and required customer parts, then treat only the amount above that floor as marketplace money. The exact number will change with your shop, but the rule prevents one attractive listing from turning a profitable day into a stalled repair queue. If a purchase would cross the floor, wait for a completed order or choose a cheaper project.", "For uncertain listings, set a second limit for replacement parts before disassembly begins. Stop and reclassify the device as a donor or hold when the actual damage exceeds that limit. Sunk cost is not a reason to keep buying components. A controlled loss of one listing is usually safer than using the next several customer rewards to rescue a flip whose finished value is still uncertain."], note: "Use the live prices in your game. Updates can change purchase costs, part availability and resale balance." }
+      { title: "Sell an owned device: the actual handoff", steps: [
+        { title: "Choose your own device", body: "Use a device you bought for resale. A customer's repair order has its own requirements; do not treat a customer's device as marketplace stock." },
+        { title: "Finish the repair", body: "Clean, repair and reassemble the device. Check for loose screws, covers and components before moving the complete item." },
+        { title: "Move it to the counter", body: "Drag the finished device to the shop counter. The Steam guide describes a direct handoff here, rather than creating a sale listing in the computer's marketplace." },
+        { title: "Collect the return", body: "The courier takes the device and leaves its value as payment. This is the sale described by the guide; use the payment to compare the return with what you spent." }
+      ], note: "This counter-to-courier workflow is community guidance, checked September 28. It does not establish a universal sell action for every loose part or unfinished shell." },
+      { title: "What the marketplace sale price means", paragraphs: ["The money-making guide describes the listing's sale price as the expected value of a repaired device. It is not your profit: subtract the purchase price and the parts you needed to finish the repair.", "Patch 1.0.013r rebalanced the marketplace on August 21. Use the values in your current game; pre-patch screenshots, example margins and fixed price thresholds may no longer apply."], note: "Keep money for bills and required customer repairs before buying optional devices." },
+      { title: "Repair, donor or hold?", table: { headers: ["Choice", "Use it when", "Next step"], rows: [["Repair and sell", "The finished value can cover the purchase and repair costs", "Finish the device and move it to the counter"], ["Parts donor", "Useful components are worth more to your current jobs than a complete flip", "Keep usable parts; do not keep buying replacements merely because you own the shell"], ["Hold", "A necessary component is unavailable or the repair would consume the bill reserve", "Store the project until its cost is clear"]] } },
+      { title: "If you cannot finish the sale", bullets: ["Check that you moved a complete device, rather than one loose component.", "Look over every workspace view for pieces still waiting to be installed.", "Confirm whether you are handling your own stock or fulfilling a customer's order.", "If the completed owned device reaches the counter but nothing happens, record its name, your game version and the exact handoff state for the technical-issues board."], note: "No source checked here establishes a single discard or sell button for all broken parts. Do not buy another device just to work around an unexplained sale failure." },
+      { title: "Achievement anchors", table: { headers: ["Achievement", "Official requirement"], rows: [["Flipper", "Buy 5 marketplace devices"], ["Garage sale!", "Buy 25 marketplace devices"], ["Making money!", "Sell 5 devices"], ["Business Shark", "Earn more than ¥100,000 in a day"], ["Millionaire!", "Earn ¥1,000,000"]] } }
     ],
-    sources: [steamStore, steamNews, steamAchievements, achievementGuide, videoGuide],
+    faq: [
+      { question: "Where do I sell a repaired device in ReStory?", answer: "Drag the finished device you own to the shop counter. The courier collects it and leaves payment; you do not need to create a marketplace sale listing for the workflow described by the Steam guide." },
+      { question: "Is the marketplace sale price my profit?", answer: "No. It is the expected repaired-device value in the cited guide. Subtract your purchase and parts costs, and check current values because the marketplace was rebalanced in 1.0.013r." }
+    ],
+    sources: [saleGuide, steamNews, steamAchievements, steamTechIssues],
     related: [{ href: "/guides/beginners/", title: "Beginner's guide", description: "Build a stable cash loop." }, { href: "/achievements/", title: "Business achievements", description: "See official requirements." }, { href: "/game-info/", title: "Game info", description: "Check current official release facts." }]
   },
   {
     path: "/guides/firmware-and-customization/",
-    updated: "2026-09-09",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
     title: "How to Update Firmware in ReStory (Unlock-ToolKit)",
-    description: "Unlock ReStory reprogramming, diagnose firmware jobs and use airbrush paint or stickers without confusing three separate customization systems.",
+    description: "Find Unlock-ToolKit, install its CD and perform ReStory firmware programming on mouse and keyboard. Check the Guitar Legend exception and separate paint unlocks.",
     eyebrow: "Unlock matrix",
-    answer: "To update a device’s firmware in ReStory, buy the Unlock-ToolKit and install its CD. Painting needs the airbrush plus palettes; stickers are purchased separately.",
-    evidence: "Community-tested",
+    answer: "Buy Unlock-ToolKit, install its delivered CD and use the workbench mouse for a device that needs reprogramming. Press keyboard keys to perform the programming, then check the result: the filmed ThinkerDad example shows green progress, SUCCESS with Finish, and the UPDATE FIRMWARE task crossed out. Guitar Legend has a separate exception below.",
+    evidence: "Official + community",
     index: true,
     sections: [
-      { title: "What 1.0.013r changed", paragraphs: ["The Aug 21 patch says firmware updating now works on gamepad and fixes story blockers tied to purchased licenses and main-quest order. The earlier 1.0.011r patch fixed the paint palette interface. Update first, then re-test the exact firmware step before buying the Unlock-ToolKit again or switching input devices."], note: "Painting and firmware are separate systems even when the same customer order asks for both." },
-      { title: "Three separate systems", table: { headers: ["Task", "What unlocks it", "Official achievement"], rows: [["Reprogram / firmware", "Unlock-ToolKit and its computer application", "Hacking 101 / 11001"], ["Paint", "Airbrush plus palette sets", "Custom orders available!"], ["Stickers", "Sticker sheets from the in-game shop", "Instant Cool / Instant Cool-er / Sticker Bombing"]] } },
-      { title: "Reprogramming workflow", steps: [
-        { title: "Buy the tool", body: "Current community guides place the Unlock-ToolKit in the tool shop area of the in-game browser." },
-        { title: "Install the application", body: "Use the delivered installation CD at the shop computer to add the reprogramming app." },
-        { title: "Accept the right job", body: "A device/order must require or support reprogramming; the tool does not replace physical repair." },
-        { title: "Verify completion", body: "Use the job requirements and official achievements as confirmation, not a real-world firmware procedure." }
-      ] },
-      { title: "If you cannot update firmware", bullets: ["Confirm the Unlock-ToolKit was purchased and its CD installed.", "Check that the current device or order actually calls for reprogramming.", "Do not confuse painting or sticker customization with firmware.", "If the app is installed but the job will not progress, check current patch notes and discussions before repeating purchases."], note: "This guide covers the ReStory mechanic, not Windows, Steam Controller or real-device firmware." },
-      { title: "Identify the job before buying another tool", paragraphs: ["Reprogramming, paint and stickers can all change a finished device, but they solve different order requirements. Read the job wording and identify the requested result before opening the in-game shop. A firmware or hacking task needs the reprogramming workflow; a color request needs the airbrush and an available palette; a sticker request uses purchased sticker sheets.", "Buying the wrong system does not move the order forward and can consume money needed for bills or replacement parts. If the device is also dirty or physically damaged, finish those requirements as separate steps. The Unlock-ToolKit does not repair a board, and a painted shell does not satisfy a reprogramming condition."] },
-      { title: "A complete reprogramming check", steps: [
-        { title: "Confirm ownership", body: "Open the tool area of the shop computer and verify that the Unlock-ToolKit purchase was completed." },
-        { title: "Install the delivered software", body: "Use the installation CD at the computer; owning the box alone may not make the app available." },
-        { title: "Open the correct application", body: "Return to the computer and look for the installed reprogramming tool rather than the paint or sticker menus." },
-        { title: "Use a compatible order", body: "The current customer or online request must support or require the reprogramming action." },
-        { title: "Check the order result", body: "Use the visible task requirement and, for milestones, the official Hacking 101 or 11001 achievement." }
-      ] },
-      { title: "Paint and stickers have their own progression", paragraphs: ["The official demo announcement describes buying the Airbrush tool and color palettes on the computer. That means the airbrush is the capability and the palette is the available color set; owning one does not imply that every color or customization option is unlocked. Start with the order requirement, then choose a design that fits the available palette.", "Sticker progression is tracked separately by the official Instant Cool, Instant Cool-er and Sticker Bombing achievements. Applying a sticker can satisfy those counters, but it is not a substitute for reprogramming or paint. For a combined order, complete each visible requirement and verify the device only after all physical and cosmetic tasks are finished."] },
-      { title: "When a specific device will not reprogram", paragraphs: ["First test whether the issue follows the device or the whole shop. If another compatible order can use the installed app, the tool is working and the original device may have a missing prerequisite or a version-specific problem. If no compatible order can use it, return to purchase and installation checks before spending more money.", "Players have asked about Guitar Legend firmware, but there is not yet a universal fix that can be confirmed. Do not repeat purchases or change unrelated system files on the assumption that every firmware failure has the same cause. Check the current technical-issues board for the device name and include the game version when reporting a reproducible failure."] }
-      ,{ title: "Diagnose the mechanic without risking your save", steps: [
-        { title: "Capture the requirement", body: "Write down the exact order text, device name and action that fails before changing anything." },
-        { title: "Restart the smallest layer", body: "Close the in-game app or return to the menu first; restart the whole game only if the state still does not refresh." },
-        { title: "Test another valid order", body: "Use a different compatible job to separate a device-specific problem from an installation or progression problem." },
-        { title: "Preserve save data", body: "Do not delete, rename or replace save files as a first troubleshooting step, and let Steam Cloud finish syncing before moving between computers." },
-        { title: "Report a reproducible sequence", body: "Include the game version, device, installed tool and exact steps on the Steam technical-issues board so the report can be compared with current fixes." }
-      ], note: "ReStory reprogramming is an in-game task. It never requires downloading third-party firmware or changing real device drivers." }
+      { title: "Where to buy the hacking program", steps: [
+        { title: "Open Gozilla Fairfox", body: "Use the browser on the shop computer. In the tool store, stay on the screwdriver icon, the default category." },
+        { title: "Find Unlock-ToolKit", body: "Scroll through that category and buy Unlock-ToolKit. It is the in-game hacking/reprogramming purchase described by the Steam achievement guide." },
+        { title: "Install the delivered CD", body: "Put the installation CD you receive into the computer. It installs an application also named Unlock-ToolKit; purchasing the tool and installing its software are separate steps." }
+      ], note: "The source does not establish one fixed unlock day or a permanent price. Use the tools available in your current story state." },
+      { title: "Perform the firmware task on PC", steps: [
+        { title: "Check the device and job", body: "Use a device whose current order calls for reprogramming and make sure the installed Unlock-ToolKit app is available. Finish physical repair requirements separately." },
+        { title: "Use the workbench mouse", body: "The confirmed player answer places the next interaction in the table/repair view: click the in-game mouse after the firmware software is installed." },
+        { title: "Press keyboard keys", body: "Press keys to carry out the programming interaction. The original questioner confirmed that this worked. The answer does not supply a password to look up or a fixed code to memorize." },
+        { title: "Watch the programming feedback", body: "The linked ThinkerDad example shows a green progress bar in UNLOCK-TOOLKIT 2.53.A, followed by SUCCESS and a Finish option." },
+        { title: "Check the order as well", body: "In that successful example, UPDATE FIRMWARE is crossed out on the device's order sheet. Confirm the firmware requirement is complete before handing over your device; physical repairs and cleaning remain separate requirements." }
+      ], note: "Mouse and keyboard input comes from the confirmed August 11–12 Steam discussion. The success-screen example is IDM ThinkerDad; it does not verify every device, a device-selection dropdown or a controller-button sequence." },
+      { title: "Video example: what a completed update looks like", paragraphs: ["In Zhain's linked playthrough, IDM ThinkerDad is on the workbench at 9:32:20. Green programming progress appears around 9:32:30–9:32:40. At 9:32:45, SUCCESS and Finish are visible while the order's UPDATE FIRMWARE line is crossed out.", "Use the source link below to compare that feedback with your screen. The video establishes the visible result for this laptop; the keyboard method is supported separately by the Steam discussion. A Pokia-specific failure or a different device's selection screen still needs its own evidence."], note: "Hacking 101 and 11001 track the first and twenty-fifth reprogrammed devices. They are milestone achievements, so they will not appear after every successful update." },
+      { title: "Guitar Legend firmware: check the old requirement", paragraphs: ["Early release orders could ask for a Guitar Legend firmware upgrade that could not be completed. In the First Update discussion on August 11, developer Eugene Kisterev clarified that guitars no longer need that upgrade.", "If an old guitar order still asks for firmware, update the game and compare its requirement with the current version before buying the toolkit again. This is different from the later story freeze after the rock musician's guitar, which has its own 1.0.015 hotfix and old-save limitation in the troubleshooting guide."], tone: "warning" },
+      { title: "When the installed app does not solve the job", bullets: ["Owning the toolkit is not enough if its delivered CD has not been installed.", "Check whether the active requirement is firmware, physical repair, paint or a sticker.", "If the interaction works on another compatible job, record the failing device and order instead of reinstalling unrelated software.", "The official 1.0.013r patch reports a gamepad firmware-control fix. Update first; the keyboard steps above are not a verified controller-button map.", "For a persistent failure, record the game version, device, requirement and the exact screen or action that fails."], note: "This is a ReStory mechanic. No real-device firmware downloads, driver changes or save-file edits are part of these steps." },
+      { title: "Paint, palettes and stickers", table: { headers: ["Task", "What to obtain", "What it changes"], rows: [["Firmware", "Unlock-ToolKit plus its installed application", "Reprogramming requirement"], ["Paint", "Airbrush and palette sets from Binotaro in the in-game browser", "Device color request"], ["Stickers", "Sticker sheets from the in-game shop", "Sticker customization and its separate achievement counters"]] }, paragraphs: ["The Steam guide places the airbrush in Binotaro's default category and palette sets under the palette icon. Owning an airbrush does not unlock every color. Patch 1.0.011r fixed the palette interface; this device-painting guidance does not establish workshop-wall or display customization controls."] }
     ],
-    sources: [steamNews, steamAchievements, achievementGuide, videoGuide],
-    related: [{ href: "/achievements/", title: "Customization achievements", description: "Check all official requirements." }, { href: "/guides/beginners/", title: "Beginner's guide", description: "Return to the core job loop." }, { href: "/faq/", title: "FAQ", description: "Check platform and progression boundaries." }]
+    faq: [
+      { question: "How do I buy the hacking program?", answer: "Open Gozilla Fairfox on the shop computer, use the screwdriver/default tool category, scroll to Unlock-ToolKit and buy it. Install the delivered CD to add the application." },
+      { question: "What code do I type for firmware?", answer: "The confirmed PC discussion describes clicking the in-game mouse in the repair view and pressing keyboard keys to perform the programming. It does not require a fixed password from a guide." },
+      { question: "How do I know the firmware update worked?", answer: "The filmed ThinkerDad example reaches SUCCESS with a Finish option after green progress, and UPDATE FIRMWARE is crossed out on the order sheet. Check both the tool result and your job requirement; the video does not establish identical screens for every device." },
+      { question: "How do I update Guitar Legend firmware?", answer: "The developer clarified on August 11 that guitars no longer require a firmware upgrade. Update an old build and check the order; do not repeatedly buy the toolkit to solve that obsolete requirement." }
+    ],
+    sources: [currentAchievementGuide, firmwareDiscussion, firmwareVideo, guitarFirmwareFix, steamNews, steamAchievements, storyHotfix],
+    related: [{ href: "/achievements/", title: "Customization achievements", description: "Check all official requirements." }, { href: "/guides/troubleshooting/", title: "Story and save troubleshooting", description: "Separate the guitar story blocker from a firmware task." }, { href: "/faq/", title: "FAQ", description: "Check platform and progression boundaries." }]
   },
   {
     path: "/guides/troubleshooting/",
-    title: "ReStory Not Working? Cleaning, Save & Progress Fixes",
-    description: "Fix common ReStory problems with cleaning, missing parts, stalled story progress, Steam Cloud, controller setup, Steam Deck and low performance.",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
+    title: "ReStory Story Stuck? Known Fixes & Save File Locations",
+    description: "Check ReStory story blockers, the 1.0.015 guitar hotfix, Windows save location and developer data folders for Mac and Steam Deck, plus repair troubleshooting.",
     eyebrow: "Get the shop moving again",
-    answer: "Start with the task state, restart safely, then separate a missed interaction from a save, control or performance problem before changing files or reinstalling.",
+    answer: "If the story stops after the rock musician’s guitar with a three-star result, the developer’s 1.0.015 hotfix targets that sequence. Other stalls need To-Do, inbox and shelf checks; saves already blocked before 1.0.013 may not recover from the update. Save locations and backup steps are below.",
     evidence: "Official + community",
     index: true,
     sections: [
@@ -420,8 +480,21 @@ export const pages: PageRecord[] = [
       ] },
       { title: "Cleaning makes a sound but nothing changes", paragraphs: ["Repeated Steam Community reports describe the first Pokia cleaning job playing a cleaning sound without removing dirt. Before treating it as a broken save, confirm that the dirty component has been removed from the device and moved to the cleaning container on the workbench. Select the part itself, choose the available brush or cleaning action and watch the active task rather than relying only on the sound.", "If the percentage or requirement still does not change, switch workspace views and inspect every loose component. The remaining target may be a smaller part outside the centered view, or the job may now require replacement or reassembly instead of more brushing. Do not keep applying the same action to the same surface when the task cue points to a different state."], note: "The first-item interaction comes from repeated community reports and may look different after an update." },
       { title: "A part or device appears to be missing", paragraphs: ["Community reports for the early Atari joystick job show that a device can move to a shelf or appear as a box after it has been opened. Check both shelf areas, the right side of the table and any parts container before buying a replacement or assuming the object was deleted. The current interface may place an untouched device differently from one that has already had a screw removed.", "If the object is absent from every visible storage area, return to the menu and reload. A restart fixed the state for some players who could not continue the first day. Preserve the save and avoid starting a new game until you have checked Steam Cloud status and current reports; a state bug and a missing local save are different problems and require different evidence."] },
-      { title: "The story or day will not progress", paragraphs: ["Finish every active in-person and online order, check the shop computer and inbox, then review whether a newly installed app or purchased license is waiting for an action. When no customer or task is active, ending the day can be the next progression trigger. Working indefinitely inside the same day will not necessarily cause another event to appear.", "If the plot still does not move, write down the current day, active customer, unfinished orders and the last story conversation. Search the technical board for those exact details. A report such as ‘stuck’ is hard to compare, while the day, character and last completed action make it possible to tell a missed prerequisite from a reproducible sequence problem."] },
-      { title: "A save is missing or different on another computer", paragraphs: ["Steam lists Steam Cloud support for ReStory, but that feature does not guarantee that every interrupted session has already uploaded. Before opening the game on a second computer, let Steam finish synchronization and confirm that both devices use the same Steam account. If Steam shows a cloud conflict, read the timestamps carefully instead of automatically choosing the newest-looking option.", "Do not delete a local save, configuration folder or Steam userdata while diagnosing a missing save. First close the game, restart Steam and check whether synchronization completes. If one computer still shows the expected shop, preserve that working copy and contact the official support channel before experimenting. This page does not publish an unverified save-folder path because the location and format can change by platform and build."] },
+      { title: "Story not progressing: match the case", table: { headers: ["What you see", "What to check", "Evidence and limit"], rows: [["No new story event, but an unfinished To-Do or boxed device remains", "Review the To-Do list, inbox and both shelves; finish the actual outstanding story task", "Developer FUNTUL notes that overlooked tasks and shelf boxes can look like broken progression"], ["The rock musician's guitar ends with three stars, then the story stops", "Install current updates and retry the save", "Developer hotfix 1.0.015 targets this sequence; older already-blocked saves may remain affected"], ["Stalled after Baketsu's competition-information message, no Robby license, no To-Do", "Record the last message, licenses, game version and save history for support", "A September 19 player report describes this even on 1.0.015r; no verified universal recovery is established"]] }, note: "The guitar firmware requirement and the rock-musician story freeze are separate issues. A firmware tool purchase does not repair a blocked story save." },
+      { title: "Before repeating days or buying more licenses", steps: [
+        { title: "Check the actual task", body: "Read the To-Do list and inbox. Look for a story device stored as a box on a shelf, and finish any task or competition the current story explicitly requests." },
+        { title: "Allow the next event", body: "When current tasks are complete, ending the day is a reasonable progression check. It is not evidence that every stalled save can be fixed by sleeping repeatedly." },
+        { title: "Match your version and save history", body: "The developer's 1.0.015 answer warns that a save started before 1.0.013 and already blocked may not recover. Keep that save rather than overwriting it while testing." },
+        { title: "Report a reproducible case", body: "Record the last story conversation, current To-Do, license state, version and whether normal orders still work. Use the linked developer support instructions if the same state persists." }
+      ], note: "Do not delete profile indexes or save files to force a story trigger. Such forum workarounds are not a verified recovery procedure here." },
+      { title: "A save is missing or different on another computer", paragraphs: ["Steam lists Steam Cloud support for ReStory, but that feature does not guarantee that every interrupted session has already uploaded. Before opening the game on a second computer, let Steam finish synchronization and confirm that both devices use the same Steam account. If Steam shows a cloud conflict, read the timestamps carefully instead of automatically choosing the newest-looking option.", "Do not delete a local save, configuration folder or Steam userdata while diagnosing a missing save. First close the game, restart Steam and check whether synchronization completes. If one computer still shows the expected shop, preserve that working copy and contact the official support channel before experimenting. The platform paths below distinguish developer-provided data folders from the Windows save subfolder shown in player logs."] },
+      { title: "ReStory save file location and data folders", table: { headers: ["Platform", "Location", "Source scope"], rows: [["Windows save files", "%USERPROFILE%\\AppData\\LocalLow\\Mandragora\\Restory\\SaveData", "SaveData is corroborated by a public game log; the developer gives the Mandragora parent folder"], ["macOS data folder", "~/Library/Application Support/Mandragora/Restory/", "Developer-provided data/support directory"], ["Steam Deck / Proton data parent", "~/.local/share/Steam/steamapps/compatdata/3812600/pfx/drive_c/users/steamuser/AppData/LocalLow/Mandragora/", "Developer's default Steam path; a different Steam library can use a different prefix location"]] }, note: "On Windows, paste the path into File Explorer's address bar. The macOS and Deck entries are data directories, not verified identical save-file layouts. Native Linux support is not implied by the Proton path." },
+      { title: "Back up before investigating a save", steps: [
+        { title: "Close ReStory", body: "Stop the game before copying files so it is not writing to them during the backup." },
+        { title: "Copy the whole Restory folder", body: "Keep a separate dated copy before experimenting. On Windows, start at the developer's Mandragora parent folder and copy its Restory child, including SaveData." },
+        { title: "Preserve the original", body: "A backup is a copy, not a rename or deletion. Do not choose an uncertain Steam Cloud replacement or edit a slot to diagnose a story blocker." },
+        { title: "Use the developer's report instructions", body: "The pinned support post requests reproduction steps, an image or video and a compressed Restory folder. Review anything you share for personal data and use the developer's listed support channel." }
+      ], note: "These backup steps preserve evidence; they do not promise restoration of a corrupted or previously blocked save." },
       { title: "Low FPS, stutter or unusual GPU load", paragraphs: ["An official playtest patch added VSync and target-framerate options and advised players with GPU performance problems to try disabling VSync and selecting a 30 or 60 FPS target. That advice came from an earlier build, so use it only when the same options exist in the current release. Change one setting at a time, return to the same scene and compare the result before changing resolution or driver controls.", "Close unnecessary background applications, confirm the game is fully updated and test the minimum supported settings before reinstalling. The official Steam data lists Windows and macOS support with modest minimum requirements, but meeting a minimum does not guarantee identical performance in every repair scene. If the problem began after a patch, include the patch date, hardware, resolution and the scene that reproduces it in the report."] },
       { title: "Controller and Steam Deck checks", paragraphs: ["Steam currently lists partial controller support together with DualShock and DualSense support. Partial support can mean that some menus, text entry or fine pointer actions still work better with a mouse or trackpad. Confirm the controller is detected by Steam before launching, test the default layout and remove a custom layout temporarily when an action is missing.", "The current community board contains Steam Deck compatibility questions, but this page does not label the game Verified or Unsupported without a current official compatibility result. On Deck, test the official or default community layout, use the trackpad for pointer-heavy cleaning and compare the live Steam compatibility panel before buying specifically for handheld play."] },
       { title: "When to report the problem", paragraphs: ["Report a problem after the correct task, a menu reload and a full restart all fail. Include the game version, operating system, input method, device or customer name, exact reproduction steps and what the task panel shows. A screenshot of the workbench and active requirement is more useful than a general description, but remove account names or personal information before posting.", "Use the official Steam technical-issues board or tinyBuild support for reproducible bugs. If a community workaround requires deleting files, installing third-party software or changing an unknown configuration value, wait for an official answer or make a recoverable backup first. The goal is to restore the shop without turning a small state problem into lost progress."] }
@@ -429,16 +502,18 @@ export const pages: PageRecord[] = [
     faq: [
       { question: "Why does cleaning make a sound but not remove dirt?", answer: "Confirm the part is removed and placed at the cleaning container, select the loose component and use its brush action. If progress still does not change, reload before changing files." },
       { question: "Where did my Atari joystick or device go?", answer: "Check both shelves, the right side of the table and boxed parts. Opened devices can move away from the central bench; restart if every storage area is empty." },
-      { question: "Why is the ReStory story not progressing?", answer: "Finish active orders, check the computer and inbox, install any required app and try ending the day. Record the day and last story event if it remains stuck." },
+      { question: "Why is the ReStory story not progressing?", answer: "Check the To-Do list, inbox and boxed devices on shelves. The 1.0.015 hotfix targets a freeze after the rock musician’s guitar, but a save already blocked before 1.0.013 might not recover. Match your last event before repeating days or purchases." },
       { question: "Does ReStory support Steam Cloud?", answer: "Steam currently lists Steam Cloud support. Let synchronization finish on one device before opening the game on another, and do not delete local data during a cloud conflict." },
       { question: "How can I reduce ReStory stutter?", answer: "Update the game, test one setting at a time and, when the options exist, try the developer's earlier advice of disabling VSync with a 30 or 60 FPS target." },
       { question: "Is ReStory Steam Deck Verified?", answer: "Check the current Steam compatibility panel. Community reports exist, but this guide does not assign an official Verified or Unsupported label without a current Steam result." }
     ],
-    sources: [steamStore, steamNews, steamTechIssues],
+    sources: [storyHotfix, storyReports, saveLocations, saveLog, steamStore, steamNews, steamTechIssues],
     related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning & reassembly", description: "Check parts, views and dependency order." }, { href: "/guides/beginners/", title: "Beginner's guide", description: "Review the complete shop loop." }, { href: "/guides/firmware-and-customization/", title: "Firmware help", description: "Check Unlock-ToolKit and app setup." }, { href: "/game-info/", title: "Game info", description: "See current platforms and requirements." }]
   },
   {
     path: "/achievements/",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
     title: "All 50 ReStory Achievements: Official Checklist",
     description: "All 50 official ReStory: Chill Electronics Repairs achievement names and descriptions, grouped by repair, business, customization, Akiba and story.",
     eyebrow: "Official achievement reference",
@@ -446,26 +521,34 @@ export const pages: PageRecord[] = [
     evidence: "Official + community",
     index: true,
     sections: [
-      { title: "Before a completion run", bullets: ["Use one save for long counters unless the game or a current guide confirms cross-save progress.", "Treat hidden story achievements as missable until proven otherwise.", "Manual cleaning may be required for the 100/1,000-part counters.", "Legend of Akiba requires at least one competition win for each device."] },
+      { title: "Before a completion run", bullets: ["Use one save for long counters unless the game or a current guide confirms cross-save progress.", "Treat hidden story achievements as missable until proven otherwise.", "Since official patch 1.0.011r, sonic-bath cleaning counts toward the 100/1,000-part cleaning achievements; older manual-only advice is obsolete.", "Legend of Akiba requires at least one competition win for each device.", "Clean Job concerns workshop rubbish: use the trash can below the desk and check the side views."] },
       { title: "Before you start", intro: "The names and descriptions below match Steam Global Achievements. Tips linked from the checklist can change after a game update.", note: "Unlock percentages change continuously, so the checklist focuses on requirements rather than a temporary rarity number." }
     ],
-    sources: [steamAchievements, achievementGuide],
-    related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning achievements", description: "Manual cleaning and reassembly tips." }, { href: "/guides/legend-of-akiba/", title: "Legend of Akiba", description: "Track every competition device." }, { href: "/story/endings/", title: "Ending achievements", description: "Spoiler-marked choice guide." }]
+    sources: [steamAchievements, sonicBathPatch, currentAchievementGuide],
+    related: [{ href: "/guides/cleaning-and-reassembly/", title: "Cleaning achievements", description: "Workshop rubbish, sonic-bath counters and reassembly tips." }, { href: "/guides/legend-of-akiba/", title: "Legend of Akiba", description: "Track every competition device." }, { href: "/story/endings/", title: "Ending achievements", description: "Spoiler-marked choice guide." }]
   },
   {
     path: "/guides/legend-of-akiba/",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
     title: "Legend of Akiba Guide: 29-Device Checklist",
-    description: "Use this ReStory Legend of Akiba checklist to track all 29 competition devices, prepare your layer order and plan every assembly win for the Steam achievement.",
+    description: "Find the Akiba Championship app, track the 29 documented competition devices and check missed wins for ReStory’s Legend of Akiba achievement.",
     eyebrow: "Competition checklist",
-    answer: "Win at least one assembly competition for each of the 29 currently documented devices. Practice the dependency order and use the category checklist to track coverage.",
+    answer: "Progress the story until your inbox receives the link that installs Akiba Championship, then use the competition app. Legend of Akiba requires a win for every device; the community checklist below covers 29 documented entries.",
     evidence: "Official + community",
     index: true,
     sections: [
+      { title: "How to access Akiba competitions", steps: [
+        { title: "Progress the story and check your inbox", body: "The Steam achievement guide describes an email link that becomes available through story progression. No fixed day is established by the source." },
+        { title: "Install Akiba Championship", body: "Use the inbox link to add the app to the shop computer, then open it for competitions." },
+        { title: "Track device wins", body: "Record which device you won with, not just the total number of competitions. Repeating one model does not meet the requirement to win with each device." }
+      ], note: "If the message has not arrived, check current story tasks before assuming that buying a license alone installs the app. This page does not claim an exact story-unlock sequence for every save." },
       { title: "What Steam confirms", table: { headers: ["Achievement", "Requirement"], rows: [["Promise of Akiba", "Win one device assembly competition"], ["Star of Akiba", "Win three different device assembly competitions"], ["Legend of Akiba", "Win at least one assembly competition for each device"]] } },
-      { title: "Prepare before entering", bullets: ["Practice normal repairs until the layer order is familiar.", "Upgrade the screwdriver/tools to reduce input friction.", "Remember covers, shields, boards, cables and batteries as dependencies, not isolated parts.", "Players report that Alt+Tab can pause the competition, but test it before relying on that behavior."] },
+      { title: "Prepare before entering", bullets: ["Practice normal repairs until the layer order is familiar.", "Upgrade the screwdriver/tools to reduce input friction.", "Remember covers, shields, boards, cables and batteries as dependencies, not isolated parts.", "Use normal repairs to learn a model before its competition; the checklist names do not replace a device-specific assembly sequence."] },
       { title: "What the checklist covers", paragraphs: ["Steam defines the Legend of Akiba goal, while current Steam Community guides identify the 29 competition devices shown below. Use the list to track wins by device; practice the actual assembly order during normal repairs because each model has its own dependency stack."] }
+      ,{ title: "All devices attempted, but no Legend of Akiba?", paragraphs: ["In the achievement-bug discussion, developer FUNTUL recommends comparing your saved competition times with the original times in the linked table. An unchanged entry can reveal a device you missed; retry those competitions and check the achievement again.", "The developer table uses some internal device labels, so compare it with the game's own entries rather than treating every label as a new device. This page retains the 29-device community reference below; it does not add catalog entries based only on a differently named timing row."], note: "The official achievement defines the goal, while community guides supply the device list. A complete model-by-model assembly walkthrough is not yet verified here." }
     ],
-    sources: [steamAchievements, akibaGuide, achievementGuide],
+    sources: [steamAchievements, akibaGuide, currentAchievementGuide, akibaRecordHelp],
     related: [{ href: "/devices/", title: "Device index", description: "Browse the same 29 devices by category." }, { href: "/guides/cleaning-and-reassembly/", title: "Reassembly guide", description: "Use the reverse-order rule." }, { href: "/achievements/", title: "All achievements", description: "Track the full 50." }]
   },
   {
@@ -519,6 +602,8 @@ export const pages: PageRecord[] = [
   },
   {
     path: "/faq/",
+    updated: "2026-09-28",
+    checked: "2026-09-28",
     title: "ReStory FAQ: Platforms, Cleaning, Firmware & Progression",
     description: "Get direct answers to common ReStory questions about platforms, cleaning, selling, firmware, achievements, demo saves, endings and story progress.",
     eyebrow: "Quick answers",
@@ -531,15 +616,16 @@ export const pages: PageRecord[] = [
     faq: [
       { question: "Is ReStory on Switch, PS5, Xbox or mobile?", answer: "Steam currently confirms Windows and macOS. No official launch listing for Switch, PlayStation, Xbox, Android or iOS was available as of Aug 13, 2026." },
       { question: "How do I clean the last dirty part?", answer: "Change the workspace view, inspect every loose part and use the job/notepad cues. Also check whether a tiny component remains outside the center view." },
-      { question: "How do I sell a device?", answer: "Use the marketplace/shop flow after it unlocks, repair and fully assemble a viable device, then compare the finished return with purchase and parts costs." },
-      { question: "How do I update firmware?", answer: "In ReStory, the in-game firmware action is reprogramming. Current player guides point to the Unlock-ToolKit and its installation CD/app; painting and stickers are separate systems." },
-      { question: "Why is the story not progressing?", answer: "Finish active jobs, check the computer/inbox and try ending the day when no new in-person customer appears. If that fails, check current patch discussions for a bug." },
+      { question: "How do I sell a device?", answer: "Repair and assemble a device you own, then drag it to the shop counter. The courier collects it and leaves payment, according to the Steam money-making guide. Compare that return with purchase and parts costs." },
+      { question: "How do I update firmware?", answer: "Buy Unlock-ToolKit in the browser’s screwdriver/tool category and install its delivered CD. For a compatible job, the confirmed PC answer describes clicking the workbench mouse and pressing keyboard keys. The filmed ThinkerDad example finishes with SUCCESS and the firmware task crossed out. Guitar Legend no longer requires that upgrade after the developer’s correction." },
+      { question: "Why is the story not progressing?", answer: "Check the To-Do list, inbox and shelves for an outstanding story device. Hotfix 1.0.015 targets the rock-musician guitar freeze; saves already blocked before 1.0.013 may not recover. The troubleshooting guide distinguishes these cases." },
+      { question: "Where are ReStory save files on Windows?", answer: "The developer lists %USERPROFILE%\\AppData\\LocalLow\\Mandragora\\ as the data parent. Player logs place saves in its Restory\\SaveData child folder. Close the game and copy the whole Restory folder before investigating; see troubleshooting for Mac and Steam Deck paths." },
       { question: "How many achievements are there?", answer: "Steam Global Achievements lists 50." },
       { question: "How many devices count for Legend of Akiba?", answer: "Current Steam Community guides document 29 competition devices. The official achievement requires at least one competition win for each device." },
       { question: "Does the demo save transfer?", answer: "The official Steam pages checked on Aug 13 did not guarantee a demo-save transfer. Treat player reports as version-specific and check the current Steam discussion before relying on transfer." },
       { question: "How many endings are there?", answer: "A reliable total is not available yet because current guides disagree. The endings page covers the two final choices linked by current player guides to hidden Steam achievements." }
     ],
-    sources: [steamStore, steamAchievements, achievementGuide, videoGuide],
+    sources: [saleGuide, currentAchievementGuide, firmwareDiscussion, firmwareVideo, guitarFirmwareFix, storyHotfix, saveLocations, saveLog, steamStore, steamAchievements],
     related: commonRelated
   },
   {
