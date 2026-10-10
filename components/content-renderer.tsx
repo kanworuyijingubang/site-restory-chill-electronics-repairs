@@ -57,7 +57,7 @@ function GameGallery() {
 
 function Section({ section }: { section: PageRecord["sections"][number] }) {
   return (
-    <section className={`content-section tone-${section.tone ?? "default"}`}>
+    <section id={section.id} className={`content-section tone-${section.tone ?? "default"}`}>
       <h2>{section.title}</h2>
       {section.intro && <p className="section-intro">{section.intro}</p>}
       {section.paragraphs?.map((p) => <p key={p}>{p}</p>)}
@@ -66,6 +66,17 @@ function Section({ section }: { section: PageRecord["sections"][number] }) {
       {section.table && <div className="table-wrap"><table><thead><tr>{section.table.headers.map((h) => <th key={h}>{h}</th>)}</tr></thead><tbody>{section.table.rows.map((row) => <tr key={row.join("|")}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div>}
       {section.note && <aside className="note"><strong>Tip</strong>{section.note}</aside>}
     </section>
+  );
+}
+
+function TaskShortcuts({ sections }: { sections: PageRecord["sections"] }) {
+  const shortcuts = sections.filter((section) => section.id && section.jumpLabel);
+  if (!shortcuts.length) return null;
+  return (
+    <nav className="task-shortcuts" aria-label="Jump to your task">
+      <span className="shortcut-label">Jump to your task</span>
+      <ul>{shortcuts.map((section) => <li key={section.id}><a href={`#${section.id}`}>{section.jumpLabel}</a></li>)}</ul>
+    </nav>
   );
 }
 
@@ -113,6 +124,7 @@ export function ContentRenderer({ page }: { page: PageRecord }) {
             <div className="eyebrow"><span />{page.eyebrow}</div>
             <h1>{page.title}</h1>
             <p className="answer">{page.answer}</p>
+            <TaskShortcuts sections={page.sections} />
             <div className="status-row"><span className="status-chip">Updated {formatPageDate(pageUpdatedDate(page))}</span>{page.spoiler && <span className="status-chip spoiler-chip">Spoilers</span>}</div>
             {home && <div className="hero-actions"><Link className="button primary-button" href="/guides/">Open guide desk</Link><Link className="button ghost-button" href="/achievements/">Track achievements</Link></div>}
           </div>
